@@ -1,0 +1,1009 @@
+[gd_resource type="Resource" script_class="QuestionData" load_steps=94 format=3 uid="uid://43na3exv4vet"]
+
+[ext_resource type="Script" path="res://question_entry_resource.gd" id="1_c6f28"]
+[ext_resource type="Script" path="res://question_data_resource_template.gd" id="2_3n64e"]
+
+[sub_resource type="Resource" id="Resource_534jw"]
+script = ExtResource("1_c6f28")
+question_text = "Ve kterém roce jel Dismanův soubor na historicky první letní tábor do Vráže u Písku?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "1944"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Tábořiště bylo postaveno z výtěžku inscenace Broučci. Mezi tehdejšími členy byli například Jiří Horčička, Ladislav Padior, Zdeněk Borovec či Pavel Kohout."
+
+[sub_resource type="Resource" id="Resource_0otdw"]
+script = ExtResource("1_c6f28")
+question_text = "Který významný rozhlasový režisér převzal v roce 1973 soubor pro zakladateli Miloslavu Dismanovi? "
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Jan Berger"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Bergerovy hry se v rozhlase dodnes reprízují. Patří mezi ně například Alabastrová ručička nebo Krajkářská pohádka."
+
+[sub_resource type="Resource" id="Resource_wxwqw"]
+script = ExtResource("1_c6f28")
+question_text = "Která z těchto osobností neprošla Dismanovým souborem?"
+answers = Array[String](["Marek Eben", "Kryštof Hádek", "Václav Postránecký ", "Ondřej Brzobohatý"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_q2fc8"]
+script = ExtResource("1_c6f28")
+question_text = "Koho vidíme na této fotografii?"
+answers = Array[String](["Ladislav Padior", "Zdeněk Beran", "Zdeněk Borovec", "Pavel Kohout"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka3_foto, zdroj ApF CRo.jpg"
+media_source = "ApF ČRo"
+answer_info = "Ladislav Padior padl na barikádách během bojů o rozhlas společně s dvěma dalšími souborovými kamarády Zdeňkem Beranem a Milanem Magnuskou. Pohřbeni jsou na pražských Olšanech."
+
+[sub_resource type="Resource" id="Resource_ql6ps"]
+script = ExtResource("1_c6f28")
+question_text = "V roce 1946 uskutečnil Dismanův soubor dvouměsíční zájezd do zahraničí. O jakou zem se jednalo?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Velká Británie"
+question_type = 1
+media_path = "res://media/Otazka4_foto, zdroj ApF CRo.jpeg"
+media_source = "ApF ČRo"
+answer_info = "Ze zájezdu se dochovaly video dokumentace. DRDS se mimo jiné objevil ve vysílání BBC. Nejmenší dívkou na fotografii je budoucí herečka Aťka Janoušková."
+
+[sub_resource type="Resource" id="Resource_p3qxi"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo převzal Dismanův soubor po Janu Bergerovi?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Zdena a Václav Fleglovi"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "DRDS vedli až do roku 2015. Za jejich působení vzniklo přes třicet inscenací a řada jejich svěřenců dodnes v souboru působí v roli asistentů."
+
+[sub_resource type="Resource" id="Resource_vjmtc"]
+script = ExtResource("1_c6f28")
+question_text = "Nikola Hořejš a Václav Flegl mladší založili na letním soustředění souborové rádio DISS. Ve kterém roce to bylo?"
+answers = Array[String](["1999", "2004", "1994", "1985"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Rádio DISS je dodnes nedílnou součástí letních soustředění. Pravidelné vysílání má před snídaní a po obědě."
+
+[sub_resource type="Resource" id="Resource_6pfpb"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se jmenuje rádio Dismanova souboru, které vysílá od roku 1994 na každém letním soustředění?"
+answers = Array[String](["Rádio DISS", "Disrádio", "Disman FM", " Český rozhlas - DISS"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Rádio DISS založili Nikola Hořejš a Václav Flegl mladší. Na letním soustředění se nyní vysílá ráno a odpoledne"
+
+[sub_resource type="Resource" id="Resource_qgfep"]
+script = ExtResource("1_c6f28")
+question_text = "Prvním divadelním představením, které Miloslav Disman se souborem nastudoval, byli Broučci Jana Karafiáta. Kolika repríz se tato inscenace dočkala?"
+answers = Array[String](["332", " 800", "153", "91"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Broučci se uváděli na scéně pražského Intimního divadla. Z výtěžku ze vstupného se poté částečně financovala výstavba tábora, kam Dismanův soubor jel na historicky první letní soustředění."
+
+[sub_resource type="Resource" id="Resource_qgh4n"]
+script = ExtResource("1_c6f28")
+question_text = "Jevištní zpracování Karafiátových Broučků bylo v podání Dismanova souboru nejčastěji k vidění na prknech jednoho pražského divadla. O kterou scénu se jednalo?"
+answers = Array[String](["Národní divadlo", "Divadlo Na Zábradlí", "Intimní divadlo", "Divadlo Za Branou"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Broučci se dočkali celkem 332. repríz. Z výtěžku bylo zaplaceno první letní soustředění v roce 1944"
+
+[sub_resource type="Resource" id="Resource_njr5b"]
+script = ExtResource("1_c6f28")
+question_text = "Dismanův soubor spustil v roce 2022 na Radiožurnálu vlastní podcast. Jak se jmenuje?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Děti se ptají"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Podcast vznikl v reakci na Ruskou invazi na Ukrajinu. Epizoda o celkem pěti rozhovorech vznikla během týdne. Reportérský tým pod vedením Josefa Kaňky tvořili Meda Folprechtová, Alex Mojžíš, Honza Vokrouhlecký, Matěj Trejtnar a Johanka Racková."
+
+[sub_resource type="Resource" id="Resource_1flwd"]
+script = ExtResource("1_c6f28")
+question_text = "Kterým představením, které se zároveň dočkalo rozhlasové adaptace, debutovala se starším souborem v roce DRDS Jana Doležalová Franková?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "…a bolelo nebe"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Koláž z textů terezínských dětí je na souborovém repertoáru dodnes. V režii po Janě Doležalové Frankové pokračuje Jan Hnilička společně s asistenty."
+
+[sub_resource type="Resource" id="Resource_q0dwc"]
+script = ExtResource("1_c6f28")
+question_text = "Se kterým světoznámým zpěvákem vystoupil Dismanův soubor v roce 1996 na Letenské pláni?"
+answers = Array[String](["Bono Vox", "Bob Dylan", "Michael Jackson", "David Bowie"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Na Jacksonův koncert na Letenské pláni tehdy přišlo přes stodvacet tisíc lidí."
+
+[sub_resource type="Resource" id="Resource_s6yu0"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo z klanu Převrátilů nikdy nebyl členem DRDS?"
+answers = Array[String](["Martin Převrátil", "Matěj Převrátil", "Mikuláš Převrátil", "Alena Převrátilová"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Alena Převrátilová v Dismanově souboru působí coby producentka od roku 2021. Dle komiksové kresby člena Teodora Slámy dokáže zařídit i nemožné."
+
+[sub_resource type="Resource" id="Resource_ol0ng"]
+script = ExtResource("1_c6f28")
+question_text = "Letní soustředění DRDS se od roku 2018 odehrávají stále na stejném místě. Na kterém?"
+answers = Array[String](["Dobrá nad Sázavou", "Želiv", "Mladějov", "Jesenice u Rakovníka"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Domovem letních táborů je Základna Peira, kde nás pravidelně hostí Tomáš Müller a Šárka Bečková. Oba jsou se souborem v kontaktu i během sezóny a všemi Dismančaty i vedením jsou považováni za členy souborové rodiny."
+
+[sub_resource type="Resource" id="Resource_n88a7"]
+script = ExtResource("1_c6f28")
+question_text = "V roce 2009 odjelo na letní soustředění DRDS poprvé a naposledy pět sourozenců. O který rodinný klan se jednalo?"
+answers = Array[String](["Tučkovi", "Köhlerovi", "Převrátilovi", "Součkovi"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Dorota, Antonín a Josef jeli coby členové, Marie a Alžběta již působily v asistentských řadách."
+
+[sub_resource type="Resource" id="Resource_1o5qw"]
+script = ExtResource("1_c6f28")
+question_text = "Které z uvedených představení nerežírovala Zdena Fleglová?"
+answers = Array[String](["Brundibár", "Peaceničky", "Máj", "Bratři v poli"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Bratři v poli je inscenace režírovaná aktuální uměleckou vedoucí Magdalenou Gracerovou Chrzovou."
+
+[sub_resource type="Resource" id="Resource_din8t"]
+script = ExtResource("1_c6f28")
+question_text = "Na letním soustředění jsou pravidelně odměňovány nejuklizenější chatičky a jejich členové. Jak se jmenuje plyšová trofej, která byla zavedena v éře Jana Bergera a nyní je opět na táborech udělována?"
+answers = Array[String](["Hrošík čistík", "Medvídek čistoty", "Slon úklidu", "Pes úklidář"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Medvídek čistoty může měnit obydlí každý den. V nejčistším pokoji pak přenocuje. Přes rok je na hlídání u asistentky Kačky Pušové"
+
+[sub_resource type="Resource" id="Resource_nkyq4"]
+script = ExtResource("1_c6f28")
+question_text = "Zlatoň a Zlatuše patří od roku 1998 k nejvýznamnějším souborovým oceněním. V posledních letech jména vítězů vyhlašuje formou video vzkazu uznávaný literát a především souborový přítel. Kdo to je?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Miloš Doležal"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Ve videích pravidelně vystupuje i s DRDS psem Boganem. Miloš Doležal je mimo jiné autorem souborového představení Pepito, (ne)plivej!"
+
+[sub_resource type="Resource" id="Resource_l0dub"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se jmenuje moderátor, který byl v roce 1994 u založení souborového rádia DISS?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Libor Bouček"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Spoluzakladatel rádia DISS Nikola Hořejš v rozhovoru se současnými Dismančaty Boučka popsal jako zuřivého reportéra, který byl schopný nashromáždit nepředstavitelné množství vysílacího materiálu."
+
+[sub_resource type="Resource" id="Resource_cx61y"]
+script = ExtResource("1_c6f28")
+question_text = "Která z uvedených cen se v Dismanově souboru neuděluje?"
+answers = Array[String](["Reportér roku", "Herecký výkon roku", "Skokan roku", "Objev roku"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Ekvivalentem objevu roku by teoreticky mohla být cena Nováček roku. Ta se na táboře uděluje Dismančeti, které nejlépe zvládne svou úvodní souborovou sezónu. "
+
+[sub_resource type="Resource" id="Resource_uusqo"]
+script = ExtResource("1_c6f28")
+question_text = "Manželé Fleglovi mnohokrát vyjeli s Dismančaty do zahraničí. Kam směřovala jejich poslední souborová cesta v roce 2015?"
+answers = Array[String](["do Japonska", "do Belgie", "do USA", "do Francie"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Do všech ostatních uvedených zemí se soubor vypravil již dříve. S Fleglovými dále Dismančata procestovala například Švédsko, Německo či Portugalsko."
+
+[sub_resource type="Resource" id="Resource_b7j26"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo hovoří na této nahrávce?"
+answers = Array[String](["Zdena Fleglová", "Jana Doležalová Franková", "Hana Kofránková", "Jana Koubková"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka22_zvuk.mp3"
+media_source = "ApF ČRo"
+answer_info = "Na nahrávce Jana popisuje, jak nahlíží na práci se členy Dismanova souboru. Záznam vznikl pro účely bakalářského rozhlasového dokumentu Josefa Kaňky, během posledních let jsme ale tato Janina slova mohli také několikrát slyšet ve vysílání Českého rozhlasu."
+
+[sub_resource type="Resource" id="Resource_hsrn2"]
+script = ExtResource("1_c6f28")
+question_text = "Se kterým věhlasným rozhlasovým režisérem, kterému se přezdívalo „pohádkář český” spolupracoval Dismanův soubor již od éry Miloslava Dismana?"
+answers = Array[String](["s Jiřím Horčičkou", "s Karlem Weinlichem", "s Alešem Vrzákem", "s Janem Fuchsem"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Karel Weinlich za souborem dojížděl na letní soustředění i za manželů Fleglových. Dismančata do svých her obsazoval pravidelně a dodnes je považován za jednoho ze souborových patronů."
+
+[sub_resource type="Resource" id="Resource_0g5gq"]
+script = ExtResource("1_c6f28")
+question_text = "Která z uvedených olympiád není součástí letního soustředění DRDS?"
+answers = Array[String](["jazyková olympiáda", "kulturní olympiáda", "vlastivědná olympiáda", "sportovní olympiáda"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Kulturní olympiády jsou tradičním kláním v přednesu. Ve skupinkách na vlastivědnou olympiádu pak Dismančata zpracovávají určité téma v rámci libovolného formátu. Sportovní olympiádu netřeba popisovat."
+
+[sub_resource type="Resource" id="Resource_prnhm"]
+script = ExtResource("1_c6f28")
+question_text = "Tady si sednu a napíšu báseň. Pod tímto názvem od roku 2024 Dismanův soubor uvádí pásmo experimentální poezie Ernsta Jandla. Kdo je režisérem tohoto představení?"
+answers = Array[String](["Magdalena Gracerová-Chrzová", "Vlastimil Kaňka", "Jan Hnilička", "Petr Gojda"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Jandlově poezii se Vlastimil Kaňka věnoval již v rámci vlastivědné olympiády v roce 2019. Pro Dismančata též občas připravuje různé rozhlasové pořady. U příležitosti 90. výročí například vznikla v jeho režii nová adaptace Karafiátových Broučků."
+
+[sub_resource type="Resource" id="Resource_mdmn6"]
+script = ExtResource("1_c6f28")
+question_text = "Který souborový absolvent a bývalý asistent aktuálně tvoří polovinu hudebního dua Mutanti Hledaj Východisko?"
+answers = Array[String](["Martin Luhan", "Adam Rut", "Matěj Křístek", "Jiří Konvalinka"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Jiří Konvalinka se též věnuje herectví. V souboru jsme mohli sledovat i jeho režisérské dovednosti. Společně s Týnou Průchovou například vedli souborovou adaptaci Klicperovy Veselohry na mostě v roce 2005."
+
+[sub_resource type="Resource" id="Resource_yfic1"]
+script = ExtResource("1_c6f28")
+question_text = "Tajemství hrobaříků, Teorie podivnosti či Srdce Evropy. To je jen krátký výčet knih, pod kterými je podepsána držitelka ceny Magnesia Litera a naše souborová absolventka. Jak se jmenuje?"
+answers = Array[String](["Radka Třeštíková", "Pavla Horáková", "Radka Denemarková", "Jana Šrámková"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Pavla Horáková navštěvovala Dismanův soubor v éře sbormistra Jana Bergera. O svých zážitcích z DRDS vyprávěla mimo jiné v pořadu Zpátky do studia, který je stále k poslechu na našich webových stránkách"
+
+[sub_resource type="Resource" id="Resource_5t8s0"]
+script = ExtResource("1_c6f28")
+question_text = "Koho slyšíme na nahrávce?"
+answers = Array[String](["Miloslava Dismana mladšího", "Karla Weinlicha", "Jana Bergera", "Václava Flegla"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka28_zvuk.mp3"
+media_source = "ApF ČRo"
+answer_info = "Václav Flegl stál v čele souboru společně s uměleckou vedoucí a svou ženou Zdenou Fleglovou. Stále zůstává pravděpodobně největším odborníkem na historii DRDS a celé souborové společenství, o kterém dodnes informuje v rámci emailového měsíčníku DRDSpress."
+
+[sub_resource type="Resource" id="Resource_ewsho"]
+script = ExtResource("1_c6f28")
+question_text = "Se kterým představením debutovala v roce 2023 umělecká vedoucí Magdalena Gracerová Chrzová?"
+answers = Array[String](["Zpověď Jonatána Papírníka", "Čigoligo, Jestřábe, aneb motýl ve tváři", "Bratři v poli", "Tady si sednu a napíšu báseň"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Inscenaci Bratři v poli připravila podle stejnojmenné knihy básnířky a spisovatelky Jany Šrámkové. Na představení spolupracovala s mladším souborem. Debutové premiéře předcházela ještě drobnější jevištní inscenace 3D s dívkami ze STARS."
+
+[sub_resource type="Resource" id="Resource_i285w"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se jmenuje program, se kterým DRDS tradičně zahajuje novou sezónu? Napovíme, že se týká o souhrn letního soustředění."
+answers = Array[String](["Táborové vzpomínky", "Zpět na soustředění", "Táborové ozvěny", "Ozvěny tábora"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Táborové ozvěny se v posledních letech zpravidla konají ve velkém sále divadla Minor. Moderátory večera jsou vždy Zlatoň a Zlatuše. "
+
+[sub_resource type="Resource" id="Resource_mfkmn"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se říká plyšové putovní trofeji, kterou si každý rok na soustředění převezme Nováček roku?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Květovaný kůň"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Květovaný kůň je rekvizitou ze stejnojmenného představení, které soubor nacvičil v roce 1996 pod vedením Zdeny Fleglové. Ta inscenaci navíc přeobsadila a přezkoušela i v roce 2014."
+
+[sub_resource type="Resource" id="Resource_g8v6g"]
+script = ExtResource("1_c6f28")
+question_text = "Ve kterém roce oficiálně vznikl Dismanův soubor?"
+answers = Array[String](["1945", "1955", "1935", "1932"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Přesné datum stanovil Miloslav Disman zpětně na 15. září 1935. Název Dismanův rozhlasový dětský soubor však nevymyslel sám, přišel s ním spisovatel Vladislav Vančura."
+
+[sub_resource type="Resource" id="Resource_rr8u4"]
+script = ExtResource("1_c6f28")
+question_text = "Ze které souborové inscenace je tato hudební ukázka?"
+answers = Array[String](["Brundibár", "Všehokniha", "Zpátky do lesa", "Do velké krajiny Dudédu"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka33_zvuk.mp3"
+media_source = ""
+answer_info = "Představení poskládala Jana Doležalová Franková z básní a textů Ivana Martina Jirouse. Pásmo se rovněž dočkalo rozhlasové adaptace"
+
+[sub_resource type="Resource" id="Resource_w7ghc"]
+script = ExtResource("1_c6f28")
+question_text = "Kde se narodil Miloslav Disman?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Bělá pod Bezdězem"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "V Bělé pod Bezdězem sbíral i své první pedagogické zkušenosti. Dnes má na náměstí pamětní desku."
+
+[sub_resource type="Resource" id="Resource_67led"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo je na tomto snímku z prvního letního soustředění DRDS v roce 1944?"
+answers = Array[String](["Pavel Kohout", "Ladislav Padior", "Josef Vinklář", "Zdeněk Borovec"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka35_foto, zdroj ApF CRo .jpg"
+media_source = "zdroj: ApF ČRo"
+answer_info = "Textař a libretista Zdeněk Borovec je podepsán pod desítkami písní Karla Gotta, Marie Rottrové, Jiřího Korna nebo Heleny Vondráčkové. "
+
+[sub_resource type="Resource" id="Resource_ob02r"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se jmenuje první dochovaná nahrávka Dismanova rozhlasového dětského souboru?"
+answers = Array[String](["Podblanické děti návštěvou v Praze", "Tatínek pracuje v továrně", "Jdou naše pluky", "S maminkou na výletě"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Úplně prvním počinem byla stylizovaná reportáž Podblanické děti návštěvou v Praze, tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband Tatínek pracuje v továrně"
+
+[sub_resource type="Resource" id="Resource_llghs"]
+script = ExtResource("1_c6f28")
+question_text = "ak se jmenuje úplně první dochovaná nahrávka DRDS, kterou teď slyšíte?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Tatínek pracuje v továrně"
+question_type = 1
+media_path = "res://media/Otazka37_zvuk.mp3"
+media_source = ""
+answer_info = "Úplně prvním počinem byla stylizovaná reportáž Podblanické děti návštěvou v Praze, tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband Tatínek pracuje v továrně;"
+
+[sub_resource type="Resource" id="Resource_7j36y"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo je autorem textu hymny DRDS?"
+answers = Array[String](["Pavel Kohout", "Zdeněk Borovec", "Petr Borkovec", "Marek Eben"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Hymnu DRDS doplnila na souborovém repertoáru v roce 2023 táborová píseň Červánky z Broučkiád, která se zpívá každý den před spaním."
+
+[sub_resource type="Resource" id="Resource_le46d"]
+script = ExtResource("1_c6f28")
+question_text = "Reprízy souborového Brundibára navštívila od začátku 90. let i řada vážených pamětníků a pamětnic. Jednou z nich byla i osoba s iniciály M.K., jak se jmenovala?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Marta Kottová"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Marta Kottová provázela DRDS na desítkách představení po celé republice, řadu z nich sama domluvila. Prošla koncentračním táborem v Terezíně i vyhlazovacím táborem v Osvětimi."
+
+[sub_resource type="Resource" id="Resource_1hj76"]
+script = ExtResource("1_c6f28")
+question_text = "V Dismanově souboru působila mezi lety 2018 a 2021 herečka a režisérka Viktorie Čermáková. Jak se jmenuje inscenace, kterou nazkoušela s mladším souborem?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Zpátky do lesa"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Autorkou knižních předloh Haló, Jácíčku, Auto z pralesa a Písně mravenčí chůvy je spisovatelka Daisy Mrázková. Za roli Jácíčka získal Mikuláš Čížek souborové ocenění Herecký výkon roku."
+
+[sub_resource type="Resource" id="Resource_vn7cc"]
+script = ExtResource("1_c6f28")
+question_text = "Pod vedením Zdeny Fleglové vznikly v Dismanově souboru dvě různé adaptace Máchova Máje - scénická a rozhlasová. Zvuková nahrávka následně získala prestižní rozhlasové ocenění. Které?"
+answers = Array[String](["Prix Bohemia Radio", "Prix Italia", "Åke Blomström Award", "Audio and Radio Industry Awards"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_isrki"]
+script = ExtResource("1_c6f28")
+question_text = "Které pražské divadlo by se aktuálně dalo označit za domovskou scénu DRDS?"
+answers = Array[String](["Divadlo Radar", "Divadlo Minor", "Divadlo na Vinohradech", "Divadlo Sklep"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "V malém i velkém sále Minoru každý rok vystupujeme zhruba s desítkou představení. Vedle běžného repertoáru zde prezentujeme také program s názvem Táborové ozvěny, který každý rok shrnuje klíčové události letního soustředění."
+
+[sub_resource type="Resource" id="Resource_lyhgh"]
+script = ExtResource("1_c6f28")
+question_text = "Václav Flegl během svého souborového působení začal redigovat dismančecí měsíčník. Tento list stále pokračuje, byť je aktuálně spíše občasníkem. Jak se časopis jmenuje?"
+answers = Array[String](["DRDSpress", "Disnovinky", "Dispress", "Distisk"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Současným šéfredaktorem Dispressu je asistent a videoherní publicista Filip Svoboda. O grafickou úpravu se pak stará Magdalena Martinovská. Všechna čísla jsou dostupná na našem webu."
+
+[sub_resource type="Resource" id="Resource_6kjrt"]
+script = ExtResource("1_c6f28")
+question_text = "Dismanův soubor se v minulosti mnohokrát vypravil do zahraničí. V letech 1946 a 2009 navštívil stejnou evropskou zem. Která to byla?"
+answers = Array[String](["Velká Británie", "Francie", "Švédsko", "Portugalsko"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "První zájezd do Velké Británie trval přes deset týdnů a Dismančata se objevila i ve vysílání BBC. Návštěva v roce 2009 byla výrazně kratší. Týdenní pobyt provázely reprízy dětské opery Brundibár."
+
+[sub_resource type="Resource" id="Resource_cdqxb"]
+script = ExtResource("1_c6f28")
+question_text = "Kdopak to je na fotografii?"
+answers = Array[String](["Zdena Fleglová", "Jana Doležalová Franková", "Magdalena Gracerová Chrzová", "Hana Kofránková"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka45_foto, zdroj archiv Milose Dolezala.png"
+media_source = "zdroj: archiv Miloše Doležala"
+answer_info = "Před Dismanovým souborem působila Jana Franková jako herečka Realistického divadla, Divadla za branou II., Divadla Dagmar či brněnského Divadla U stolu. Byla i zkušenou pedagožkou a rozhlasovou interpretkou pevného hlasu."
+
+[sub_resource type="Resource" id="Resource_c4qjj"]
+script = ExtResource("1_c6f28")
+question_text = "Který český herec a souborový absolvent je na této fotce?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Kryštof Hádek"
+question_type = 1
+media_path = "res://media/Otazka46 - foto, zdroj DRDS.png"
+media_source = "zdroj: DRDS"
+answer_info = "Kryštof Hádek je držitelem třech Českých lvů a pravidelně ho můžeme vídat třeba i na scéně pražského Studia Dva. Na působení v souboru vzpomínal mimo jiné v rozhovoru s Janem Pokorným, kde přiznal, že nejvíce ho tehdy bavilo jezdit dokola páter nosterem. "
+
+[sub_resource type="Resource" id="Resource_imvdj"]
+script = ExtResource("1_c6f28")
+question_text = "V českém znění připravili. Který z uvedených absolventů DRDS se již nevěnuje dabingu?"
+answers = Array[String](["Jiří Köhler", "Robin Pařík", "Jan Battěk", "Jiří Švorc"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Jiří Švorc pracuje jako právník, v dobách svého souborového působení ale například poskytl hlas Seamusi Finniganovi z Harryho Pottera. Zbylá trojice se stále v dabingových studiích pohybuje. Jirka s Robinem i v pozici režisérů."
+
+[sub_resource type="Resource" id="Resource_6x47s"]
+script = ExtResource("1_c6f28")
+question_text = "Který z uvedených symbolů není a nebyl logem DRDS?"
+answers = Array[String](["res://media/Otazka48_foto_1.png", "res://media/Otazka48_foto_2, zdroj DRDS.png", "res://media/Otazka48_foto_3, zdroj DRDS.png", "res://media/Otazka48_foto_4, zdroj DRDS.png"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "V sociálních sítích a na plakátech se sice s touto grafikou setkávat můžeme, nikdy ale nebyla oficiálním logem DRDS."
+
+[sub_resource type="Resource" id="Resource_ddxug"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se říká souborovým absolventům, kteří v DRDS zůstanou dále a pomáhají s přípravou programů pro členy?"
+answers = Array[String](["Asistenti", "Praktikanti", "Pomocníci ze Zámku", "Vedoucí"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Asistenti si své nové posily vždy vybírají sami. Dismanův soubor by bez nich nemohl fungovat."
+
+[sub_resource type="Resource" id="Resource_o808e"]
+script = ExtResource("1_c6f28")
+question_text = "Dostanete Nebelvír do maléru! Který souborový absolvent a dlouholetý asistent poskytl svůj hlas postavě Nevilla Longbottoma z filmové ságy o Harrym Potterovi?"
+answers = Array[String](["Jiří Köhler", "Matěj Převrátil", "Zdeněk Charvát", "Robin Pařík"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Zdeněk se v souboru roky staral o technickou přípravu večerních programů. Již v té době společně s kolegou Jakubem Štěpánem založili firmu Oldservis (dnes Stagelab), která se stará právě o technické zajištění různých akcí. Zdeněk též dlouhou dobu působil na Chodovské tvrzi nebo v Divadle v Celetné."
+
+[sub_resource type="Resource" id="Resource_8cknp"]
+script = ExtResource("1_c6f28")
+question_text = "Pouze jeden člověk se v novodobé souborové historii stal Absolutním vítězem kulturní olympiády třikrát. Kdo je držitelem tohoto výjimečného hattricku?"
+answers = Array[String](["Vlastimil Kaňka", "Klára Cibulová", "Tobiáš Vacek", "Sophie Bransten"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Sophie zvítězila v letech 2018, 2020 a 2021."
+
+[sub_resource type="Resource" id="Resource_xygjy"]
+script = ExtResource("1_c6f28")
+question_text = "Dismanův soubor musel v období normalizace změnit své jméno. Zkratka DRDS však zůstala stejná. Jak se soubor nazýval?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Dětský rozhlasový dramatický soubor"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Pod tímto názvem soubor fungoval v éře režiséra Jana Bergera. Jeho vedením prošli například Darja a Radim Špačkovi, Ondřej Kepka, Jitka Ježková, Jiří Ployhar nebo Radek Valenta."
+
+[sub_resource type="Resource" id="Resource_jxns7"]
+script = ExtResource("1_c6f28")
+question_text = "Dismanův soubor má ve svých absolventských řadách i držitele filmového Oscara. Kdo jím je?"
+answers = Array[String](["Zdeněk Svěrák", "Jiří Menzel", "Jan Svěrák", "Ivan Jandl"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Ivan Jandl získal Oscara za dětskou roli ve filmu Poznamenaní. Oceněn byl i prestižním Zlatým glóbem."
+
+[sub_resource type="Resource" id="Resource_byl6s"]
+script = ExtResource("1_c6f28")
+question_text = "Koho slyšíme na nahrávce?"
+answers = Array[String](["Kryštofa Hádka", "Ivana Jandla", "Marka Ebena", "Václava Jílka"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka54_zvuk.wav"
+media_source = ""
+answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film Poznamenaní z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
+
+[sub_resource type="Resource" id="Resource_yppbu"]
+script = ExtResource("1_c6f28")
+question_text = "Koho vidíme na fotografii?"
+answers = Array[String](["Ladislava Padiora", "Pavla Kohouta", "Ivana Jandla", "Jiřího Horčičku"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka55_foto, zdroj film Poznamenani.png"
+media_source = "film Poznamenaní"
+answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film Poznamenaní z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
+
+[sub_resource type="Resource" id="Resource_wdng1"]
+script = ExtResource("1_c6f28")
+question_text = "Seřaď události od nejstarší po nejmladší: Založení DRDS, První letní soustředění, Výprava do Velké Británie, Natočení voicebandu Tatínek pracuje v továrně"
+answers = Array[String](["Založení DRDS", "První letní soustředění", "Výprava do Velké Británie", "Natočení voicebandu Tatínek pracuje v továrně"])
+correct_answer_index = -1
+correct_answer_text = "[3,0,1,2]"
+question_type = 2
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_pbcvm"]
+script = ExtResource("1_c6f28")
+question_text = "V souboru máme několik držitelů dabingové ceny Františka Filipovského. Který z uvedených laureátů ji získal nejdříve?"
+answers = Array[String](["Kristian Páca", "David Bergman", "Matěj Převrátil"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Matěj Převrátil získal cenu v roce 2016 za roli Finna Baxtera ve filmu Sám doma 5: Velká vánoční loupež"
+
+[sub_resource type="Resource" id="Resource_vpe0e"]
+script = ExtResource("1_c6f28")
+question_text = "Co v souboru znamená Kinderstube?"
+answers = Array[String](["večer o etiketě", "dětská trubka", "čokoládové ocenění", "dětská ubytovna"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Kinderstube je na táborovém programu každý rok. Dlouhé roky se o tento večerní program staral asistent Jakub Gryc."
+
+[sub_resource type="Resource" id="Resource_andvu"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se jmenuje festival mladých filmařů, kde Dismančata každoročně sbírají kinematografická ocenění?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Pražský filmový kufr"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "První ročník se uskutečnil v roce 2016. Mezi oceněné filmy z DRDS dílny patří například A co jsem zdědila já?, Muchovci, Alenka v říši divů nebo 90 let paní K"
+
+[sub_resource type="Resource" id="Resource_g4dlb"]
+script = ExtResource("1_c6f28")
+question_text = "DRDS se jednou měsíčně objevovalo ve vysílání ČRo Vltava se svým hodinovým pásmem reportáží a aktualit. Jak se tento měsíčník nazýval?"
+answers = Array[String](["Deník DRDS", "Zápisník DRDS", "Notes DRDS", "Diář DRDS"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Diář DRDS se vysílal každou poslední neděli v měsíci v dopoledních hodinách."
+
+[sub_resource type="Resource" id="Resource_75dhd"]
+script = ExtResource("1_c6f28")
+question_text = "Dismančata se vedle divadla Minor často objevují na dalších pražských scénách. V jednom z nich si členové zahráli např. v inscenacích Oblomov, Dáváme děťátku klystýr či Konec rudého člověka. O které divadlo se jedná?"
+answers = Array[String](["Divadlo ABC", "Divadlo pod Palmovkou", "Divadlo v Dlouhé", "Divadlo na Zábradlí"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Dismančata si v těchto a dalších představeních zahrála například pod vedením režisérky Hany Burešové."
+
+[sub_resource type="Resource" id="Resource_ltxy1"]
+script = ExtResource("1_c6f28")
+question_text = "Po smrti umělecké vedoucí Jany Frankové se přezkušování souborových inscenací ujal její synovec. Uveďte jeho celé jméno."
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Jan Hnilička"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Jan Hnilička se členy přezkušoval představení Zpověď Jonatána Papírníka a …a bolelo nebe. Zkoušení odborně zaštiťovala i sestra Jany Frankové Hana Hniličková."
+
+[sub_resource type="Resource" id="Resource_kut3x"]
+script = ExtResource("1_c6f28")
+question_text = "Alena Převrátilová pracuje jako producentka souboru od roku 2021. Jak se jmenovala její předchůdkyně?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Hana Novenková"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Hana Novenková přišla do souboru v roce 2015. Mimo práci producentky také zastávala roli souborové fotografky a švadleny."
+
+[sub_resource type="Resource" id="Resource_r6prn"]
+script = ExtResource("1_c6f28")
+question_text = " Kolik let vedli Dismanův soubor manželé Fleglovi?"
+answers = Array[String](["25", "35", "20", "18"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Od roku 1990 vzniklo pod Fleglovic vedením přes třicet divadelních inscenací i řada rozhlasových výstupů. Nejdéle se na repertoáru držela dětská opera Brundibár, se kterou soubor často vystupoval i v zahraničí."
+
+[sub_resource type="Resource" id="Resource_njt6y"]
+script = ExtResource("1_c6f28")
+question_text = "Současné logo DRDS, na kterém je koník se sluchátky, navrhovala osoba, jež se zároveň stará o grafickou podobu našeho souborového občasníku Dispress. Jak se jmenuje?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Magdalena Martinovská"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Magdalena Martinovská, řečená Manča, zahájila svou spolupráci s DRDS během vedení Jany Frankové. "
+
+[sub_resource type="Resource" id="Resource_khxfe"]
+script = ExtResource("1_c6f28")
+question_text = "Která z uvedených moderátorských osobností nikdy nenavštěvovala Dismanův soubor?"
+answers = Array[String](["Tereza Tobiášová", "Marek Eben", "Libor Bouček", "Lucie Výborná"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_t5tcw"]
+script = ExtResource("1_c6f28")
+question_text = "S názvem Dismanův rozhlasový dětský soubor kdysi nepřišel Miloslav Disman sám. Který uznávaný spisovatel jméno tělesa navrhl?"
+answers = Array[String](["Pavel Kohout", "Ivan Olbracht", "Karel Čapek", "Vladislav Vančura"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_0ga31"]
+script = ExtResource("1_c6f28")
+question_text = "Ve 40. letech přijal Miloslav Disman do souboru budoucí uznávanou herečku, která byla tehdy pro židovský původ vyloučena z Národního divadla. Jak se jmenovala?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Aťka Janoušková"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Aťka Janoušková vedle Kouzelného doktora nazpívala třeba i písně Králíček Azurit nebo Spadla kroupa do kraje. V roce 2009 též získala Cenu Františka Filipovského za celoživotní mistrovství v dabingu. Mezi její nejznámější role patří například Včelka Mája."
+
+[sub_resource type="Resource" id="Resource_pfeh3"]
+script = ExtResource("1_c6f28")
+question_text = "Skladba Zázračný doktor, jejíž část si zde můžete poslechnout, byla nazpívána i otextována bývalými Dismančaty. O kterou z uvedených dvojic se jedná?"
+answers = Array[String](["Aťka Janoušková a Pavel Kohout", "Gabriela Osvaldová a Zdeněk Borovec", "Aťka Janoušková a Zdeněk Borovec", "Alena Vránová a Petr Kopta"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka69_zvuk.mp3"
+media_source = ""
+answer_info = "Skladbu nazpívala svým nezaměnitelným hlasem Aťka Janoušková. Zdeněk Borovec se postaral o text."
+
+[sub_resource type="Resource" id="Resource_jt17e"]
+script = ExtResource("1_c6f28")
+question_text = "Dismaňák má ve svých absolventských řadách i mnoho úspěšných textařů a textařek. Která z uvedených osobností však náš soubor nikdy nenavštěvovala?"
+answers = Array[String](["Petr Kopta", "Zdeněk Borovec", "Gabriela Osvaldová", "Karel Šíp"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Dalším uznávaným souborovým textařem je například Pavel Kohout, který je mimo jiné autorem hymny DRDS."
+
+[sub_resource type="Resource" id="Resource_4atr2"]
+script = ExtResource("1_c6f28")
+question_text = "Pradědeček a loupežníci, Shakesappeal aneb Míchaný půvab či Černošský Pán Bůh a páni Izraeliti. Pod těmito inscenacemi, které soubor uváděl mezi lety 1993-2000, je režijně podepsán Zdeněk Bartoš. Ten aktuálně působí jako umělecký šéf a režisér jedné západočeské divadelní scény. Ve kterém městě? "
+answers = Array[String](["Cheb", "Plzeň", "Klatovy", "Tachov"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Kromě Chebu působí Zdeněk Bartoš od roku 2018 také jako šéf činohry Karlovarského městského divadla."
+
+[sub_resource type="Resource" id="Resource_q3u3m"]
+script = ExtResource("1_c6f28")
+question_text = "V roce 2021 získala Thalii pro nejlepšího herce do 33let naše souborová absolventka. Jak se jmenuje?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Denisa Barešová"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Denisa navštěvovala DRDS od roku 2005. Zahrála si například postavu Aninky v Brundibárovi, kterou jsme v jejím podání mohli vidět i ve Švédsku, Francii nebo Anglii."
+
+[sub_resource type="Resource" id="Resource_7pl7w"]
+script = ExtResource("1_c6f28")
+question_text = "V roce 2002 založili absolventi DRDS vlastní uměleckou skupinu, ve které se mohli nadále divadelně realizovat. Jak se tato skupina fungující dodnes jmenuje?"
+answers = Array[String](["TOPstars", "OLDstars", "HarOLD", "Disman-Čáry-Um"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Název OLDstars odkazuje na označení staršího souboru, které v Dismaňáku roky používáme. V čele umělecké skupiny stojí už téměř 25 let jeden ze zakladatelů Tomáš Staněk."
+
+[sub_resource type="Resource" id="Resource_mraww"]
+script = ExtResource("1_c6f28")
+question_text = "Jak se jmenuje principál umělecké skupiny OLDstars, kterou v roce 2002 založili absolventi DRDS, aby se mohli dále divadelně realizovat?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Tomáš Staněk"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Tomáš Staněk v souboru dlouho fungoval jako asistent a vyzkoušel si i práci produkčního DRDS. Aktuálně působí jako mluvčí Národního divadla."
+
+[sub_resource type="Resource" id="Resource_o558v"]
+script = ExtResource("1_c6f28")
+question_text = "V roce 1946 vyrazil Dismanův soubor na bez mála deseti týdenní výpravu do Anglie, Skotska a nakonec i Holandska. Kolik představení stihl odehrát?"
+answers = Array[String](["25", "44", "68", "98"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Během pobytu děti bydlely u místních rodin. V rozhovoru, který najdete na našem webu, na zájezd vzpomínala tehdejší členka a choreografka Eva Zetová."
+
+[sub_resource type="Resource" id="Resource_na2if"]
+script = ExtResource("1_c6f28")
+question_text = "Na doporučení Miloslava Dismana natočila v roce 1950 členka DRDS Zdeňka Ptáčková (později Harcubová) jeden z dialogů pro známou sérii Čochtan vypravuje. Se kterým legendárním hercem tehdy dialog vedla?"
+answers = Array[String](["Jan Werich", "Jiří Adamíra", "Karel Höger", "Vlastimil Brodský"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_lsmcm"]
+script = ExtResource("1_c6f28")
+question_text = "V roce 1996 vyšlo CD s názvem Zobáky, na kterém Dismančata spolupracovala s uznávanou českou jazzovou zpěvačkou a skladatelkou. Jak se jmenovala?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Jana Koubková"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Jana Koubková byla též autorkou nejrůznějších rozhlasových pořadů, které se objevovaly zejména ve vysílání Vltavy."
+
+[sub_resource type="Resource" id="Resource_8ofmy"]
+script = ExtResource("1_c6f28")
+question_text = "Po roce 2015 uspořádal Dismanův soubor několik natáčecích výprav, které zaštiťoval věhlasný rozhlasový reportér. Kdo to byl?"
+answers = Array[String](["Tomáš Černý", "Pavel Novák", "Lubomír Smatana", "Jan Pokorný"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Tomáš Černý aktuálně působí coby dramaturg pořadu Host Lucie Výborné. Je jedním z největších znalců rozhlasové historie, což se projevuje i během natáčení. S Dismančaty točil téměř výhradně na magnetofonové pásy."
+
+[sub_resource type="Resource" id="Resource_nnnrl"]
+script = ExtResource("1_c6f28")
+question_text = "S hudebním doprovodem Miloslavu Dismanovi v souboru pomáhal stálý spolupracovník Fanda Kaplan. Se kterým z uvedených nástrojů ho děti mohly nejčastěji vidět?"
+answers = Array[String](["kontrabas", "kytara", "akordeon", "housle"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Vedle tahací harmoniky hrál Fanda Kaplan ještě na klavír. V souboru působila i jeho manželka Marie, která vedla výuku zpěvu."
+
+[sub_resource type="Resource" id="Resource_fe7m0"]
+script = ExtResource("1_c6f28")
+question_text = "Reportér roku je jediným souborovým oceněním, které má ve svém podtitulu jméno věhlasné rozhlasové osobnosti. Jak se ceně říká?"
+answers = Array[String](["Cena Míly Koláře", "Cena Josefa Koláře", "Cena Františka Kocourka", "Cena Tomáše Černého"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "ohumil Kolář byl jednou z nejvýraznějších osobností dětské a mládežnické publicistiky. V 80. letech byl coby šéf HRDM u vzniku legendárního pořadu Domino. Jeho největší vášní byl však přírodovědecký magazín Meteor, kam se snažil pravidelně přispívat, i když už byl zavalen šéfredaktorskými papíry."
+
+[sub_resource type="Resource" id="Resource_7mmvk"]
+script = ExtResource("1_c6f28")
+question_text = "Vánoční čas si žádá vánoční repertoár. Který z uvedených titulů Dismanův soubor nehrál?"
+answers = Array[String](["Spor u jesliček", "Česká mše vánoční", "Český rok", "Vánoce u Ivanovových"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Charmsovy Vánoce u Ivanovových byly v podání asistentů a členů DRDS k vidění pouze na táborových ozvěnách v roce 2022. Tehdy se krátká pasáž zpracovávala v rámci divadelního večera."
+
+[sub_resource type="Resource" id="Resource_avii1"]
+script = ExtResource("1_c6f28")
+question_text = "Přestože Dismančata a sport často nejdou příliš dohromady, máme ve svých absolventských řadách čtyřnásobnou mistryni republiky v sedmiboji. Jak se jmenuje?"
+answers = Array[String](["Eliška Klučinová", "Kateřina Cachová", "Kateřina Nekolná", "Patricie Vrzalová"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Úspěšná byla Kateřina Nekolná i na mistrovství světa, kde skončila na 16. místě. Aktuálně působí jako sportovní moderátorka v České televizi."
+
+[sub_resource type="Resource" id="Resource_ghi6t"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo je autorem tohoto citátu: „To nejpodnětnější, co Dismanovy zkušenosti přinesly a stále přinášejí, to je, že neopouští hlavní zásadu své činnosti, totiž že mu jde neustále o estetickou výchovu v nejširším smyslu slova a nikoli o úzkou uměleckou výchovu.“"
+answers = Array[String](["Jan Berger", "Vratislav Kubálek", "Pavel Kohout", "Bohumil Švarc"])
+correct_answer_index = 1
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_rmo6q"]
+script = ExtResource("1_c6f28")
+question_text = "Během zájezdu do Velké Británie v roce 1946 odehrál Dismanův soubor neuvěřitelných 98 představení. Jedno z nich se uskutečnilo v půli fotbalového utkání anglické ligy. Kterému klubu patřil stadion, který se na 15 minut stal jevištěm?"
+answers = Array[String](["Brighton", "FC Liverpool", "Manchester United", "Aston Villa"])
+correct_answer_index = 3
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Utkání sledovalo přes 3000 místních dělníků."
+
+[sub_resource type="Resource" id="Resource_orohb"]
+script = ExtResource("1_c6f28")
+question_text = "Z Dismanova souboru vzešla i řada rozhlasových profesionálů. Jeden z nich aktuálně informuje posluchače Radiožurnálu ze Spojených států. Jak se tento zahraniční reportér jmenuje?"
+answers = Array[String](["Pavel Novák", "Jan Kaliba", "Jiří Klečka", "Adam Weidenthaler"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = "Pavel Novák navštěvoval soubor v éře Jana Bergera. Už před svou misí v USA se ve zpravodajství věnoval zahraniční agendě"
+
+[sub_resource type="Resource" id="Resource_5ycp4"]
+script = ExtResource("1_c6f28")
+question_text = "Z Dismanova souboru vzešla i řada rozhlasových profesionálů. Jedním z nich je i bývalý moderátor Vltavy, kterému se v Dismaňáku neřeklo jinak než Steve. Jaké jméno má v občanském průkazu? "
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Martin Luhan"
+question_type = 1
+media_path = ""
+media_source = ""
+answer_info = "Martin Steve Luhan dlouho v souboru působil i jako asistent. S dětmi nastudoval například představení Příšerky a příšeři a na letních soustředěních byl jedním z největších popularizátorů karetní hry Magic the Gathering. "
+
+[sub_resource type="Resource" id="Resource_r1e0q"]
+script = ExtResource("1_c6f28")
+question_text = "Která skladba na soustředěních v 80. letech doprovázela večerní sundavání táborové vlajky?"
+answers = Array[String](["Amazing Grace", "Óda na radost", "Kouzelný doktor", "Červánky z Broučkiád"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = ""
+media_source = ""
+answer_info = ""
+
+[sub_resource type="Resource" id="Resource_ebipd"]
+script = ExtResource("1_c6f28")
+question_text = "Ze kterého představení, které se dočkalo i rozhlasové adaptace, pochází tento sestřih ukázek?"
+answers = Array[String](["Bratři v poli", "Brundibár", "…a bolelo nebe", "Všehokniha"])
+correct_answer_index = 2
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka88_zvuk.mp3"
+media_source = ""
+answer_info = "Jevištní koláž sestavila z textů terezínských dětí Jana Doležalová Franková. Dismančata díky představení mohla poznat tvorbu Hanuše Hachenburga, Petra Ginze nebo Dagmar Hilarové."
+
+[sub_resource type="Resource" id="Resource_ldv3i"]
+script = ExtResource("1_c6f28")
+question_text = "Které představení vidíme na fotografii?"
+answers = Array[String](["Brundibár", "Bratři v poli", "…a bolelo nebe", "Český rok"])
+correct_answer_index = 0
+correct_answer_text = ""
+question_type = 0
+media_path = "res://media/Otazka89_foto, zdroj Vaclav Flegl.jpeg"
+media_source = "Václav Flegl"
+answer_info = "Dětskou operu Brundibár nastudovala s DRDS Zdena Fleglová. S představením soubor pravidelně jezdil do Terezína, kde ji hrály židovské děti ve 40. letech. S Brundibárem Dismančata několikrát vyjela také do zahraničí."
+
+[sub_resource type="Resource" id="Resource_jl2wi"]
+script = ExtResource("1_c6f28")
+question_text = "Kdo hovoří na nahrávce?"
+answers = Array[String]([])
+correct_answer_index = -1
+correct_answer_text = "Zdena Fleglová"
+question_type = 1
+media_path = "res://media/Otazka90_zvuk.wav"
+media_source = ""
+answer_info = "Zdena Fleglová byla uměleckou vedoucí DRDS po Janu Bergerovi. Společně s manželem Václavem stáli v čele souboru 25 let."
+
+[resource]
+script = ExtResource("2_3n64e")
+questions = Array[ExtResource("1_c6f28")]([SubResource("Resource_534jw"), SubResource("Resource_0otdw"), SubResource("Resource_wxwqw"), SubResource("Resource_q2fc8"), SubResource("Resource_ql6ps"), SubResource("Resource_p3qxi"), SubResource("Resource_vjmtc"), SubResource("Resource_6pfpb"), SubResource("Resource_qgfep"), SubResource("Resource_qgh4n"), SubResource("Resource_njr5b"), SubResource("Resource_1flwd"), SubResource("Resource_q0dwc"), SubResource("Resource_s6yu0"), SubResource("Resource_ol0ng"), SubResource("Resource_n88a7"), SubResource("Resource_1o5qw"), SubResource("Resource_din8t"), SubResource("Resource_nkyq4"), SubResource("Resource_l0dub"), SubResource("Resource_cx61y"), SubResource("Resource_uusqo"), SubResource("Resource_b7j26"), SubResource("Resource_hsrn2"), SubResource("Resource_0g5gq"), SubResource("Resource_prnhm"), SubResource("Resource_mdmn6"), SubResource("Resource_yfic1"), SubResource("Resource_5t8s0"), SubResource("Resource_ewsho"), SubResource("Resource_i285w"), SubResource("Resource_mfkmn"), SubResource("Resource_g8v6g"), SubResource("Resource_rr8u4"), SubResource("Resource_w7ghc"), SubResource("Resource_67led"), SubResource("Resource_ob02r"), SubResource("Resource_llghs"), SubResource("Resource_7j36y"), SubResource("Resource_le46d"), SubResource("Resource_1hj76"), SubResource("Resource_vn7cc"), SubResource("Resource_isrki"), SubResource("Resource_lyhgh"), SubResource("Resource_6kjrt"), SubResource("Resource_cdqxb"), SubResource("Resource_c4qjj"), SubResource("Resource_imvdj"), SubResource("Resource_6x47s"), SubResource("Resource_ddxug"), SubResource("Resource_o808e"), SubResource("Resource_8cknp"), SubResource("Resource_xygjy"), SubResource("Resource_jxns7"), SubResource("Resource_byl6s"), SubResource("Resource_yppbu"), SubResource("Resource_wdng1"), SubResource("Resource_pbcvm"), SubResource("Resource_vpe0e"), SubResource("Resource_andvu"), SubResource("Resource_g4dlb"), SubResource("Resource_75dhd"), SubResource("Resource_ltxy1"), SubResource("Resource_kut3x"), SubResource("Resource_r6prn"), SubResource("Resource_njt6y"), SubResource("Resource_khxfe"), SubResource("Resource_t5tcw"), SubResource("Resource_0ga31"), SubResource("Resource_pfeh3"), SubResource("Resource_jt17e"), SubResource("Resource_4atr2"), SubResource("Resource_q3u3m"), SubResource("Resource_7pl7w"), SubResource("Resource_mraww"), SubResource("Resource_o558v"), SubResource("Resource_na2if"), SubResource("Resource_lsmcm"), SubResource("Resource_8ofmy"), SubResource("Resource_nnnrl"), SubResource("Resource_fe7m0"), SubResource("Resource_7mmvk"), SubResource("Resource_avii1"), SubResource("Resource_ghi6t"), SubResource("Resource_rmo6q"), SubResource("Resource_orohb"), SubResource("Resource_5ycp4"), SubResource("Resource_r1e0q"), SubResource("Resource_ebipd"), SubResource("Resource_ldv3i"), SubResource("Resource_jl2wi")])

@@ -1,0 +1,148 @@
+[gd_scene load_steps=5 format=3 uid="uid://bssmhro3fncou"]
+
+[ext_resource type="Script" path="res://scenes/desktop_layout.gd" id="1_ha3lu"]
+[ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="1_ij2e0"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_87opu"]
+resource_local_to_scene = false
+allow_unpress = true
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_0sygv"]
+resource_local_to_scene = false
+allow_unpress = true
+
+[node name="Desktop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ha3lu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ij2e0")
+text = "Skóre"
+
+[node name="ScoreNumber" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ij2e0")
+text = "0"
+
+[node name="ScoreOutOf" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ij2e0")
+text = "/10
+"
+
+[node name="MediaContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Question" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme = ExtResource("1_ij2e0")
+text = "Alena Převrátilová v Dismanově souboru působí coby producentka od roku 2021. Dle komiksové kresby člena Teodora Slámy dokáže zařídit i nemožné.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_ij2e0")
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Answer1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_87opu")
+text = "Ahoj jáá hsem tla"
+autowrap_mode = 3
+
+[node name="Answer2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_0sygv")
+text = "Martin Převrátillllllll"
+autowrap_mode = 3
+
+[node name="Answer3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_0sygv")
+text = "Martin Převrátillllllll"
+autowrap_mode = 3
+
+[node name="Answer4" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_0sygv")
+text = "Martin Převrátillllllll"
+autowrap_mode = 3
+
+[node name="AnswerConfirm" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_ij2e0")
+text = "Potvrdit odpověď"
+
+[node name="Answer" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 60)
+layout_mode = 2
+theme = ExtResource("1_ij2e0")
+text = "Alena Převrátilová v Dismanově souboru působí coby producentka od roku 2021. Dle komiksové kresby člena Teodora Slámy dokáže zařídit i nemožné.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/AnswerConfirm" to="." method="_on_answer_confirm_pressed"]
