@@ -45,7 +45,6 @@ func _on_window_size_changed():
 # Apply font sizes to various elements
 	play_button.add_theme_font_size_override("font_size", label_font_size)
 	how_to_button.add_theme_font_size_override("font_size", label_font_size)
-	header_label.add_theme_font_size_override("font_size", header_font_size)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
