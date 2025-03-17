@@ -9,11 +9,13 @@ var answer_group
 var correct_answer
 var buttons: Array = []
 var answer_container  # Reference to the container holding answer buttons
-
+var showing_answer = false
+var italics_font = load("res://font/calibri-italic.ttf")
+var regular_font = load("res://font/calibri-regular.ttf")
 func _ready() -> void:
 	# Initialize the ButtonGroup
 	answer_group = ButtonGroup.new()
-	
+
 	# Get reference to answer container
 	answer_container = $MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/AnswerContainer
 	
@@ -68,6 +70,7 @@ func _on_window_size_changed():
 		margin_container.add_theme_constant_override("margin_right", 10)
 		margin_container.add_theme_constant_override("margin_top", 20)
 		margin_container.add_theme_constant_override("margin_bottom", 10)
+		vertical_box.add_theme_constant_override("separation", 20)
 	else:
 		answer_container.columns = 2
 		label_font_size = 24
@@ -79,6 +82,7 @@ func _on_window_size_changed():
 		margin_container.add_theme_constant_override("margin_right", 100)
 		margin_container.add_theme_constant_override("margin_top", 20)
 		margin_container.add_theme_constant_override("margin_bottom", 20)
+		vertical_box.add_theme_constant_override("separation", 50)
 # Apply font sizes to various elements
 	question_label.add_theme_font_size_override("font_size", label_font_size)
 	confirm_label.add_theme_font_size_override("font_size", label_font_size)
@@ -151,18 +155,25 @@ func unpress_all_buttons():
 func _on_answer_confirm_pressed() -> void:
 	var pressed_button = answer_group.get_pressed_button()
 	if pressed_button:
-		print(pressed_button.name)
-		if pressed_button.name == correct_answer:
-			print("YIPEE")
-			score += 1
-		else:
-			print("Idiot")
-			
+		if showing_answer == true:
+			print(pressed_button.name)
+			if pressed_button.name == correct_answer:
+				print("YIPEE")
+				score += 1
+			else:
+				print("Idiot")
+			current_question_index += 1
+			$MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ScoreNumber.text = str(score)
+			$MarginContainer/HBoxContainer/VBoxContainer/Question.add_theme_font_override("font", regular_font)
+			$MarginContainer/HBoxContainer/VBoxContainer/AnswerConfirm.text = "Potvrdit odpověď!"
+			current_question_handling()
+			unpress_all_buttons()
+		if showing_answer == false:
+			$MarginContainer/HBoxContainer/VBoxContainer/Question.text = question.answer_info
+			$MarginContainer/HBoxContainer/VBoxContainer/Question.add_theme_font_override("font", italics_font)
+			$MarginContainer/HBoxContainer/VBoxContainer/AnswerConfirm.text = "další otázku!"
+			showing_answer = true
 		# Only advance if an answer was selected
-		current_question_index += 1
-		$MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ScoreNumber.text = str(score)
-		current_question_handling()
-		unpress_all_buttons()
 	else:
 		print("No button selected!")
 		# Maybe show a message to the player that they need to select an answer

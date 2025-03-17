@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://na04kfsh77v8"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_gf5xo"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gf5xo")
+
+[node name="AnswerGrid" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="Button1" type="Button" parent="AnswerGrid"]
+layout_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="AnswerGrid/Button1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[node name="Button2" type="Button" parent="AnswerGrid"]
+layout_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="AnswerGrid/Button2"]
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[node name="Button3" type="Button" parent="AnswerGrid"]
+layout_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="AnswerGrid/Button3"]
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[node name="Button4" type="Button" parent="AnswerGrid"]
+layout_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="AnswerGrid/Button4"]
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[node name="QuestionLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 22.3333
+
+[node name="NextButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Next Question"

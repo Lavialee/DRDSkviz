@@ -135,7 +135,7 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_ij2e0")
-text = "Potvrdit odpověď"
+text = "Potvrdit odpověď!"
 
 [node name="Answer" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 visible = false
