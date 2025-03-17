@@ -59,7 +59,7 @@ func _on_window_size_changed():
 	var body_font_size
 	var button_min_size
 	# Check if we're on a mobile-sized screen (width < 600 pixels)
-	if window_size.x < 600:
+	if window_size.x < window_size.y:
 		answer_container.columns = 1
 		label_font_size = 16
 		button_font_size = 16
