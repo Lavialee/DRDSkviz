@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cvcf3a0dkvy4w"]
-
-[node name="PhoneLayout" type="Control"]
-layout_mode = 3
-anchors_preset = 0

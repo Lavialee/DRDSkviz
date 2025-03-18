@@ -25,105 +25,104 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 133.0
-offset_top = 98.0
-offset_right = -133.0
-offset_bottom = -98.0
+offset_left = 97.0
+offset_top = 21.0
+offset_right = -97.0
+offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 4
+size_flags_horizontal = 8
+size_flags_vertical = 0
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_constants/separation = 40
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-alignment = 1
-
-[node name="Score" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
 text = "Skóre"
 
-[node name="ScoreNumber" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="ScoreNumber" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
 text = "0"
 
-[node name="ScoreOutOf" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="ScoreOutOf" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
 text = "/10
 "
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 15
 
-[node name="AnswerContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/CenterContainer"]
+[node name="MediaContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+self_modulate = Color(0.431373, 0.431373, 0.431373, 0)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Photo" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer"]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MediaContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AnswerContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("1_ij2e0")
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 2
 
-[node name="Answer1" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/AnswerContainer"]
-custom_minimum_size = Vector2(200, 75)
+[node name="Answer1" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
 theme = ExtResource("1_ij2e0")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_87opu")
-text = "Ahoj jáá hsem tla"
+text = "answer 1"
 autowrap_mode = 3
 
-[node name="Answer2" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+[node name="Answer2" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
-size_flags_horizontal = 0
 theme = ExtResource("1_ij2e0")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_0sygv")
-text = "Martin Převrátillllllll"
+text = "answer 2"
 autowrap_mode = 3
 
-[node name="Answer3" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+[node name="Answer3" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
-size_flags_horizontal = 0
 theme = ExtResource("1_ij2e0")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_0sygv")
-text = "Martin Převrátillllllll"
+text = "answer 3"
 autowrap_mode = 3
 
-[node name="Answer4" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+[node name="Answer4" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
 custom_minimum_size = Vector2(200, 75)
 layout_mode = 2
-size_flags_horizontal = 0
 theme = ExtResource("1_ij2e0")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_0sygv")
-text = "Martin Převrátillllllll"
+text = "answer 4
+"
 autowrap_mode = 3
 
-[node name="MediaContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="Question" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Question" type="Label" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
@@ -133,13 +132,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="AnswerConfirm" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="AnswerConfirm" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_ij2e0")
 text = "Potvrdit odpověď!"
 
-[node name="Answer" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Answer" type="Label" parent="MarginContainer/VBoxContainer"]
 visible = false
 custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
@@ -150,4 +149,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/AnswerConfirm" to="." method="_on_answer_confirm_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/AnswerConfirm" to="." method="_on_answer_confirm_pressed"]
