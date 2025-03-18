@@ -1,9 +1,7 @@
 extends Control
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 	# Connect to window resize signal to handle responsive layout
 	get_tree().get_root().size_changed.connect(_on_window_size_changed)
 	# Set initial layout
@@ -11,7 +9,6 @@ func _ready() -> void:
 	
 func _on_window_size_changed():
 	var window_size = get_viewport_rect().size
-	var header_label = $MarginContainer/HBoxContainer/VBoxContainer/Header
 	var margin_container = $MarginContainer
 	var vertical_box = $MarginContainer/HBoxContainer/VBoxContainer
 	var play_button = $MarginContainer/HBoxContainer/VBoxContainer/Hrajem
@@ -52,6 +49,5 @@ func _process(delta: float) -> void:
 
 
 func _on_hrajem_pressed() -> void:
-	print("haha")
 	get_tree().change_scene_to_file("res://scenes/DesktopLayout.tscn")
 	pass # Replace with function body.

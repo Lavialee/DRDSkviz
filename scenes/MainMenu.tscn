@@ -18,6 +18,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 132.0
+offset_top = 46.0
+offset_right = -132.0
+offset_bottom = -46.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 100
@@ -30,6 +34,7 @@ alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_constants/separation = 40
 
@@ -40,19 +45,26 @@ texture = ExtResource("2_iysm8")
 expand_mode = 5
 
 [node name="Hrajem" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = ExtResource("1_cax7d")
 theme_override_font_sizes/font_size = 40
 text = "Hrajem!"
 
 [node name="JakHrat" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = ExtResource("1_cax7d")
 theme_override_font_sizes/font_size = 40
 text = "Jak hrát?"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 444.0
+offset_right = 246.0
+offset_bottom = 591.0
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Hrajem" to="." method="_on_hrajem_pressed"]
