@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bssmhro3fncou"]
 
-[ext_resource type="Script" path="res://scenes/desktop_layout.gd" id="1_ha3lu"]
+[ext_resource type="Script" uid="uid://c3ddooq74hlxv" path="res://scenes/desktop_layout.gd" id="1_ha3lu"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="1_ij2e0"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_87opu"]
