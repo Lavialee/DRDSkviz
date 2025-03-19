@@ -18,11 +18,11 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.196
 anchor_right = 0.804
-anchor_bottom = 0.824
-offset_left = 163.208
-offset_top = 161.5
-offset_right = -163.208
-offset_bottom = -47.452
+anchor_bottom = 1.0
+offset_left = 0.207993
+offset_top = 114.0
+offset_right = -0.208008
+offset_bottom = -69.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 100
@@ -43,15 +43,17 @@ texture = ExtResource("2_iysm8")
 expand_mode = 5
 stretch_mode = 4
 
-[node name="Hrajem" type="Button" parent="MarginContainer/AspectRatioContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/AspectRatioContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("1_cax7d")
-theme_override_font_sizes/font_size = 40
-text = "Hrajem!"
+size_flags_stretch_ratio = 1.85
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
 
-[node name="JakHrat" type="Button" parent="MarginContainer/AspectRatioContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/AspectRatioContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="JakHrat" type="Button" parent="MarginContainer/AspectRatioContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -59,4 +61,13 @@ theme = ExtResource("1_cax7d")
 theme_override_font_sizes/font_size = 40
 text = "Jak hrát?"
 
-[connection signal="pressed" from="MarginContainer/AspectRatioContainer/VBoxContainer/Hrajem" to="." method="_on_hrajem_pressed"]
+[node name="Hrajem" type="Button" parent="MarginContainer/AspectRatioContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_cax7d")
+theme_override_font_sizes/font_size = 40
+text = "Hrajem!"
+
+[connection signal="pressed" from="MarginContainer/AspectRatioContainer/VBoxContainer/MarginContainer/VBoxContainer/Hrajem" to="." method="_on_hrajem_pressed"]
