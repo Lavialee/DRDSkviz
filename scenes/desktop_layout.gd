@@ -5,8 +5,9 @@ extends Control
 @onready var score_label = $MarginContainer/HBoxContainer/ScoreNumber
 @onready var confirm_label = $MarginContainer/VBoxContainer/AnswerConfirm
 @onready var media_container = $MarginContainer/VBoxContainer/MediaContainer
+@onready var audio_streamer = $MarginContainer/VBoxContainer/MediaContainer/PlayButton/Audio
 var question_data = preload("res://all_questions.tres")
-var italics_font = load("res://font/calibri-italic.ttf")
+var italics_font = preload("res://font/calibri-italic.ttf")
 var regular_font = load("res://font/calibri-regular.ttf")
 
 var selected_questions: Array = []
@@ -40,7 +41,7 @@ func _ready() -> void:
 # Choose 10 random multiple-choice questions
 func choose_questions():
 	var all_questions = question_data.questions.filter(func(q):
-		return q.question_type == q.QuestionType.MULTIPLE_CHOICE)
+		return q.question_type == q.QuestionType.MULTIPLE_CHOICE && q.media_path)
 	all_questions.shuffle()
 	selected_questions = all_questions.slice(0, 10)  # Select the first 10 elements
 
@@ -53,10 +54,21 @@ func current_question_handling():
 		question.correct_answer_index = question.answers.find(original_answers[question.correct_answer_index])  # Update correct index
 		correct_answer = "Answer" + str(question.correct_answer_index + 1)
 		print("the correct answer is: ",correct_answer)
+		var file_extension = question.media_path.get_extension()
 		if question.media_path:
-			media_container.set_visible(true)
-			$MarginContainer/VBoxContainer/MediaContainer/Photo.texture = load(question.media_path)
+			match file_extension:
+				"png","jpg","jpeg": 
+					print("this is a picture")
+					$MarginContainer/VBoxContainer/MediaContainer/Photo.set_visible(true)
+					$MarginContainer/VBoxContainer/MediaContainer/PlayButton.set_visible(false)
+					$MarginContainer/VBoxContainer/MediaContainer/Photo.texture = load(question.media_path)
+				"mp3": 
+					print("this is a mp3")
+					$MarginContainer/VBoxContainer/MediaContainer/PlayButton.set_visible(true)
+					$MarginContainer/VBoxContainer/MediaContainer/Photo.set_visible(false)
+					audio_streamer.stream = load(question.media_path)
 			print("has media! ", question.media_path)
+			print("this should be the extension: ", file_extension)
 		else:
 			media_container.set_visible(false)
 		# Update UI
@@ -122,3 +134,10 @@ func _on_answer_confirm_pressed() -> void:
 	else:
 		print("No button selected!")
 		# Maybe show a message to the player that they need to select an answer
+
+
+func _on_play_button_pressed() -> void:
+	audio_streamer.play()
+	if audio_streamer.playing:
+		print("should be playing rn")
+	pass # Replace with function body.
