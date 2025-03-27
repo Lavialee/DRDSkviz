@@ -2,13 +2,17 @@
 
 [ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_d3djj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8erx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihkcs"]
 content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
-bg_color = Color(0.1, 0.1, 0.1, 0.3)
-draw_center = false
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0980392, 0.156863, 0.501961, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
@@ -20,12 +24,13 @@ content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
-bg_color = Color(1, 1, 1, 0.75)
+bg_color = Color(1, 1, 1, 1)
 draw_center = false
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
+border_color = Color(1, 1, 1, 0)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
@@ -69,24 +74,26 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcalu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o3ph"]
 content_margin_left = 15.0
 content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
 bg_color = Color(0.0980392, 0.156863, 0.501961, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.0980392, 0.156863, 0.501961, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+corner_detail = 5
 
 [resource]
 Button/colors/font_color = Color(0.0980392, 0.156863, 0.501961, 1)
-Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_disabled_color = Color(0.0980392, 0.156863, 0.501961, 1)
 Button/colors/font_focus_color = Color(0.0980392, 0.156863, 0.501961, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_pressed_color = Color(0.0980392, 0.156863, 0.501961, 1)
@@ -103,11 +110,11 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 24
 Button/fonts/font = ExtResource("1_d3djj")
-Button/styles/disabled = SubResource("StyleBoxFlat_l8erx")
+Button/styles/disabled = SubResource("StyleBoxFlat_ihkcs")
 Button/styles/focus = SubResource("StyleBoxFlat_0ajtc")
 Button/styles/hover = SubResource("StyleBoxFlat_wbijx")
 Button/styles/normal = SubResource("StyleBoxFlat_r1bv0")
-Button/styles/pressed = SubResource("StyleBoxFlat_gcalu")
+Button/styles/pressed = SubResource("StyleBoxFlat_2o3ph")
 Label/colors/font_color = Color(0.0980392, 0.156863, 0.501961, 1)
 Label/colors/font_outline_color = Color(0.899258, 0.899258, 0.899258, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)

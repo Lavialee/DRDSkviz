@@ -115,15 +115,20 @@ func _on_answer_confirm_pressed() -> void:
 			unpress_all_buttons()
 
 		else:
+			for button in buttons:
+				button.disabled = true
 			print("The pressed answer: ", pressed_button.name)
 
 			if pressed_button.name == correct_answer:
+				pressed_button.add_color_override("font_color", Color(0, 1, 0))  # Green if correct
 				print("Chose the correct answer!")
 				score += 1
 				score_label.text = str(score)
 
 			else:
 				print("Chose a wrong answer!")
+				pressed_button.add_color_override("font_color", Color(1, 0, 0))
+				
 
 			showing_answer = true
 			question_label.text = question.answer_info
