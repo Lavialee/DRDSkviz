@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7thqlvx4c4qb"
-path="res://.godot/imported/Otazka48_foto_3, zdroj DRDS.png-95d01ce57f1d0dac2c374a689031e9ee.ctex"
+uid="uid://bh2fix4y7gj87"
+path="res://.godot/imported/Otazka48_foto_1.png-784b8097e818c996cc94a6ebf327a7d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://media/Otazka48_foto_3, zdroj DRDS.png"
-dest_files=["res://.godot/imported/Otazka48_foto_3, zdroj DRDS.png-95d01ce57f1d0dac2c374a689031e9ee.ctex"]
+source_file="res://media/questions/Otazka48_foto_1.png"
+dest_files=["res://.godot/imported/Otazka48_foto_1.png-784b8097e818c996cc94a6ebf327a7d1.ctex"]
 
 [params]
 

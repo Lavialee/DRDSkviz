@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bssmhro3fncou"]
+[gd_scene load_steps=10 format=3 uid="uid://bssmhro3fncou"]
 
 [ext_resource type="Script" uid="uid://c3ddooq74hlxv" path="res://scenes/desktop_layout.gd" id="1_ha3lu"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="1_ij2e0"]
-[ext_resource type="Texture2D" uid="uid://bamxl2gpxgxqk" path="res://media/Otazka4_foto, zdroj ApF CRo.jpeg" id="3_mnqw2"]
+[ext_resource type="Texture2D" uid="uid://bamxl2gpxgxqk" path="res://media/questions/Otazka4_foto, zdroj ApF CRo.jpeg" id="3_mnqw2"]
+[ext_resource type="FontFile" uid="uid://ctn37whlqaavh" path="res://font/Drds-Regular.ttf" id="3_x1n5j"]
 [ext_resource type="Texture2D" uid="uid://m0artjibfp3j" path="res://media/play_icon.png" id="4_0qunc"]
 [ext_resource type="Texture2D" uid="uid://nanpcbrk8jf1" path="res://media/pause_icon.png" id="5_dyeug"]
+[ext_resource type="Texture2D" uid="uid://creeujstwusmy" path="res://media/audio_playing_animation.tres" id="6_dyeug"]
+
+[sub_resource type="Theme" id="Theme_l35yq"]
+Label/fonts/font = null
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_nlbfj"]
 
@@ -38,20 +43,24 @@ alignment = 1
 [node name="Score" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
+theme_override_fonts/font = ExtResource("3_x1n5j")
 text = "Skóre"
 
 [node name="ScoreNumber" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
+theme_override_fonts/font = ExtResource("3_x1n5j")
 text = "0"
 
 [node name="ScoreOutOf" type="Label" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
+theme_override_fonts/font = ExtResource("3_x1n5j")
 text = "/10"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme = SubResource("Theme_l35yq")
 theme_override_constants/separation = 15
 alignment = 2
 
@@ -92,6 +101,15 @@ stretch_mode = 0
 
 [node name="Audio" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer/PlayButton"]
 volume_db = 4.0
+
+[node name="kun" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_ij2e0")
+texture = ExtResource("6_dyeug")
+expand_mode = 1
 
 [node name="AudioTimer" type="HSlider" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
 custom_minimum_size = Vector2(400, 0)

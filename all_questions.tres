@@ -43,7 +43,7 @@ answers = Array[String](["Ladislav Padior", "Zdeněk Beran", "Zdeněk Borovec", 
 correct_answer_index = 0
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka3_foto, zdroj ApF CRo.jpg"
+media_path = "res://media/questions/Otazka3_foto, zdroj ApF CRo.jpg"
 media_source = "ApF ČRo"
 answer_info = "Ladislav Padior padl na barikádách během bojů o rozhlas společně s dvěma dalšími souborovými kamarády Zdeňkem Beranem a Milanem Magnuskou. Pohřbeni jsou na pražských Olšanech."
 
@@ -54,7 +54,7 @@ answers = Array[String]([])
 correct_answer_index = -1
 correct_answer_text = "Velká Británie"
 question_type = 1
-media_path = "res://media/Otazka4_foto, zdroj ApF CRo.jpeg"
+media_path = "res://media/questions/Otazka4_foto, zdroj ApF CRo.jpeg"
 media_source = "ApF ČRo"
 answer_info = "Ze zájezdu se dochovaly video dokumentace. DRDS se mimo jiné objevil ve vysílání BBC. Nejmenší dívkou na fotografii je budoucí herečka Aťka Janoušková."
 
@@ -252,7 +252,7 @@ answers = Array[String](["Zdena Fleglová", "Jana Doležalová Franková", "Hana
 correct_answer_index = 1
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka22_zvuk.mp3"
+media_path = "res://media/questions/Otazka22_zvuk.mp3"
 media_source = "ApF ČRo"
 answer_info = "Na nahrávce Jana popisuje, jak nahlíží na práci se členy Dismanova souboru. Záznam vznikl pro účely bakalářského rozhlasového dokumentu Josefa Kaňky, během posledních let jsme ale tato Janina slova mohli také několikrát slyšet ve vysílání Českého rozhlasu."
 
@@ -318,7 +318,7 @@ answers = Array[String](["Miloslava Dismana mladšího", "Karla Weinlicha", "Jan
 correct_answer_index = 3
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka28_zvuk.mp3"
+media_path = "res://media/questions/Otazka28_zvuk.mp3"
 media_source = "ApF ČRo"
 answer_info = "Václav Flegl stál v čele souboru společně s uměleckou vedoucí a svou ženou Zdenou Fleglovou. Stále zůstává pravděpodobně největším odborníkem na historii DRDS a celé souborové společenství, o kterém dodnes informuje v rámci emailového měsíčníku DRDSpress."
 
@@ -373,7 +373,7 @@ answers = Array[String](["Brundibár", "Všehokniha", "Zpátky do lesa", "Do vel
 correct_answer_index = 3
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka33_zvuk.mp3"
+media_path = "res://media/questions/Otazka33_zvuk.mp3"
 media_source = ""
 answer_info = "Představení poskládala Jana Doležalová Franková z básní a textů Ivana Martina Jirouse. Pásmo se rovněž dočkalo rozhlasové adaptace"
 
@@ -395,7 +395,7 @@ answers = Array[String](["Pavel Kohout", "Ladislav Padior", "Josef Vinklář", "
 correct_answer_index = 3
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka35_foto, zdroj ApF CRo .jpg"
+media_path = "res://media/questions/Otazka35_foto, zdroj ApF CRo .jpg"
 media_source = "zdroj: ApF ČRo"
 answer_info = "Textař a libretista Zdeněk Borovec je podepsán pod desítkami písní Karla Gotta, Marie Rottrové, Jiřího Korna nebo Heleny Vondráčkové. "
 
@@ -417,7 +417,7 @@ answers = Array[String]([])
 correct_answer_index = -1
 correct_answer_text = "Tatínek pracuje v továrně"
 question_type = 1
-media_path = "res://media/Otazka37_zvuk.mp3"
+media_path = "res://media/questions/Otazka37_zvuk.mp3"
 media_source = ""
 answer_info = "Úplně prvním počinem byla stylizovaná reportáž Podblanické děti návštěvou v Praze, tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband Tatínek pracuje v továrně;"
 
@@ -505,7 +505,7 @@ answers = Array[String](["Zdena Fleglová", "Jana Doležalová Franková", "Magd
 correct_answer_index = 1
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka45_foto, zdroj archiv Milose Dolezala.png"
+media_path = "res://media/questions/Otazka45_foto, zdroj archiv Milose Dolezala.png"
 media_source = "zdroj: archiv Miloše Doležala"
 answer_info = "Před Dismanovým souborem působila Jana Franková jako herečka Realistického divadla, Divadla za branou II., Divadla Dagmar či brněnského Divadla U stolu. Byla i zkušenou pedagožkou a rozhlasovou interpretkou pevného hlasu."
 
@@ -516,7 +516,7 @@ answers = Array[String]([])
 correct_answer_index = -1
 correct_answer_text = "Kryštof Hádek"
 question_type = 1
-media_path = "res://media/Otazka46 - foto, zdroj DRDS.png"
+media_path = "res://media/questions/Otazka46 - foto, zdroj DRDS.png"
 media_source = "zdroj: DRDS"
 answer_info = "Kryštof Hádek je držitelem třech Českých lvů a pravidelně ho můžeme vídat třeba i na scéně pražského Studia Dva. Na působení v souboru vzpomínal mimo jiné v rozhovoru s Janem Pokorným, kde přiznal, že nejvíce ho tehdy bavilo jezdit dokola páter nosterem. "
 
@@ -534,7 +534,7 @@ answer_info = "Jiří Švorc pracuje jako právník, v dobách svého souborové
 [sub_resource type="Resource" id="Resource_6x47s"]
 script = ExtResource("1_c6f28")
 question_text = "Který z uvedených symbolů není a nebyl logem DRDS?"
-answers = Array[String](["res://media/Otazka48_foto_1.png", "res://media/Otazka48_foto_2, zdroj DRDS.png", "res://media/Otazka48_foto_3, zdroj DRDS.png", "res://media/Otazka48_foto_4, zdroj DRDS.png"])
+answers = Array[String](["res://media/questions/Otazka48_foto_1.png", "res://media/questions/Otazka48_foto_2, zdroj DRDS.png", "res://media/questions/Otazka48_foto_3, zdroj DRDS.png", "res://media/questions/Otazka48_foto_4, zdroj DRDS.png"])
 correct_answer_index = 3
 correct_answer_text = ""
 question_type = 0
@@ -604,7 +604,7 @@ answers = Array[String](["Kryštofa Hádka", "Ivana Jandla", "Marka Ebena", "Vá
 correct_answer_index = 1
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka54_zvuk.wav"
+media_path = "res://media/questions/Otazka54_zvuk.wav"
 media_source = ""
 answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film Poznamenaní z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
 
@@ -615,7 +615,7 @@ answers = Array[String](["Ladislava Padiora", "Pavla Kohouta", "Ivana Jandla", "
 correct_answer_index = 2
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka55_foto, zdroj film Poznamenani.png"
+media_path = "res://media/questions/Otazka55_foto, zdroj film Poznamenani.png"
 media_source = "film Poznamenaní"
 answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film Poznamenaní z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
 
@@ -769,7 +769,7 @@ answers = Array[String](["Aťka Janoušková a Pavel Kohout", "Gabriela Osvaldov
 correct_answer_index = 2
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka69_zvuk.mp3"
+media_path = "res://media/questions/Otazka69_zvuk.mp3"
 media_source = ""
 answer_info = "Skladbu nazpívala svým nezaměnitelným hlasem Aťka Janoušková. Zdeněk Borovec se postaral o text."
 
@@ -978,7 +978,7 @@ answers = Array[String](["Bratři v poli", "Brundibár", "…a bolelo nebe", "V�
 correct_answer_index = 2
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka88_zvuk.mp3"
+media_path = "res://media/questions/Otazka88_zvuk.mp3"
 media_source = ""
 answer_info = "Jevištní koláž sestavila z textů terezínských dětí Jana Doležalová Franková. Dismančata díky představení mohla poznat tvorbu Hanuše Hachenburga, Petra Ginze nebo Dagmar Hilarové."
 
@@ -989,7 +989,7 @@ answers = Array[String](["Brundibár", "Bratři v poli", "…a bolelo nebe", "Č
 correct_answer_index = 0
 correct_answer_text = ""
 question_type = 0
-media_path = "res://media/Otazka89_foto, zdroj Vaclav Flegl.jpeg"
+media_path = "res://media/questions/Otazka89_foto, zdroj Vaclav Flegl.jpeg"
 media_source = "Václav Flegl"
 answer_info = "Dětskou operu Brundibár nastudovala s DRDS Zdena Fleglová. S představením soubor pravidelně jezdil do Terezína, kde ji hrály židovské děti ve 40. letech. S Brundibárem Dismančata několikrát vyjela také do zahraničí."
 
@@ -1000,7 +1000,7 @@ answers = Array[String]([])
 correct_answer_index = -1
 correct_answer_text = "Zdena Fleglová"
 question_type = 1
-media_path = "res://media/Otazka90_zvuk.wav"
+media_path = "res://media/questions/Otazka90_zvuk.wav"
 media_source = ""
 answer_info = "Zdena Fleglová byla uměleckou vedoucí DRDS po Janu Bergerovi. Společně s manželem Václavem stáli v čele souboru 25 let."
 

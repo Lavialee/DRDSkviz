@@ -1,8 +1,20 @@
-[gd_scene load_steps=10 format=3 uid="uid://ojx0ytcwrvsx"]
+[gd_scene load_steps=14 format=3 uid="uid://ojx0ytcwrvsx"]
 
 [ext_resource type="Script" uid="uid://cj0220tjsi3ab" path="res://scenes/test.gd" id="1_g074l"]
 [ext_resource type="Texture2D" uid="uid://ofdwr1yrsia1" path="res://media/diskviz.png" id="2_bl13t"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="3_iyx0m"]
+[ext_resource type="Texture2D" uid="uid://b2mp67ea05eln" path="res://media/play_icon_0.png" id="4_lpvoh"]
+[ext_resource type="Texture2D" uid="uid://ru8mnhr5potb" path="res://media/play_icon_1.png" id="5_at5dv"]
+[ext_resource type="Texture2D" uid="uid://b3n1ol6yi52rc" path="res://media/play_icon_2.png" id="6_jcd4p"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_uacia"]
+frames = 3
+frame_0/texture = ExtResource("4_lpvoh")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("5_at5dv")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("6_jcd4p")
+frame_2/duration = 0.2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auw7j"]
 bg_color = Color(1, 1, 1, 1)
@@ -93,6 +105,12 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("3_iyx0m")
 text = "BUTTON 1"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = SubResource("AnimatedTexture_uacia")
+stretch_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2

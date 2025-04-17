@@ -1,7 +1,8 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://drr3y75g2e42m"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://drr3y75g2e42m"]
 
 [ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_d3djj"]
 [ext_resource type="StyleBox" uid="uid://di68xlxfgctf8" path="res://disabled_neutral.tres" id="2_2o3ph"]
+[ext_resource type="FontFile" uid="uid://ctn37whlqaavh" path="res://font/Drds-Regular.ttf" id="3_n881e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ajtc"]
 content_margin_left = 15.0
@@ -141,4 +142,6 @@ Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 24
 Label/fonts/font = ExtResource("1_d3djj")
+ScoreLabel/base_type = &"Label"
+ScoreLabel/fonts/font = ExtResource("3_n881e")
 VBoxContainer/constants/separation = 35

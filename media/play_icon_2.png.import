@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh2fix4y7gj87"
-path="res://.godot/imported/Otazka48_foto_1.png-3761b8deb70c5abea816f0283be5cb53.ctex"
+uid="uid://b3n1ol6yi52rc"
+path="res://.godot/imported/play_icon_2.png-c697ac580342aee5d18c6359b45d86b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://media/Otazka48_foto_1.png"
-dest_files=["res://.godot/imported/Otazka48_foto_1.png-3761b8deb70c5abea816f0283be5cb53.ctex"]
+source_file="res://media/play_icon_2.png"
+dest_files=["res://.godot/imported/play_icon_2.png-c697ac580342aee5d18c6359b45d86b7.ctex"]
 
 [params]
 
