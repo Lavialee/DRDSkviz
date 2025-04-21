@@ -7,25 +7,22 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[node name="Answer" type="Control"]
-layout_mode = 3
+[node name="Answer" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
 
-[node name="ColorRect" type="Panel" parent="VBoxContainer"]
+[node name="ColorRect" type="Panel" parent="PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tydki")
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+[node name="TextEdit" type="Label" parent="PanelContainer"]
 layout_mode = 2
-text = "ASDASDASDASD"
-autowrap_mode = 2
+text = "INFORMACCE K ODPOVĚDI NA OTÁZKU
+"
