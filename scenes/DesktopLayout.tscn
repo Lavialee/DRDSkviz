@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bssmhro3fncou"]
+[gd_scene load_steps=13 format=3 uid="uid://bssmhro3fncou"]
 
 [ext_resource type="Script" uid="uid://c3ddooq74hlxv" path="res://scenes/desktop_layout.gd" id="1_ha3lu"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="1_ij2e0"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://m0artjibfp3j" path="res://media/play_icon.png" id="4_0qunc"]
 [ext_resource type="Texture2D" uid="uid://nanpcbrk8jf1" path="res://media/pause_icon.png" id="5_dyeug"]
 [ext_resource type="Texture2D" uid="uid://creeujstwusmy" path="res://media/audio_playing_animation.tres" id="6_dyeug"]
+[ext_resource type="Texture2D" uid="uid://wpcc4tg2ub5k" path="res://media/pause_icon_2.png" id="8_1keyp"]
+[ext_resource type="Texture2D" uid="uid://bq5q8jsfmgvr8" path="res://vizual/audio.png" id="9_ea7go"]
+[ext_resource type="Texture2D" uid="uid://chjnbk6xi633q" path="res://vizual/vyber ze 4.png" id="9_hio1y"]
 
 [sub_resource type="Theme" id="Theme_l35yq"]
 Label/fonts/font = null
@@ -27,10 +30,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 189.0
+offset_left = 125.0
 offset_top = 29.0
-offset_right = -189.0
-offset_bottom = -48.0
+offset_right = -125.0
+offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -61,18 +64,86 @@ text = "/10"
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme = SubResource("Theme_l35yq")
-theme_override_constants/separation = 15
+theme_override_constants/separation = 20
 alignment = 2
 
+[node name="Question" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("1_ij2e0")
+text = "Alena Převrátilová v Dismanově souboru působí coby producentka od roku 2021. Dle komiksové kresby člena Teodora Slámy dokáže zařídit i nemožné."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AnswerContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_ij2e0")
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="Answer1" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+custom_minimum_size = Vector2(300, 85)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+keep_pressed_outside = true
+button_group = SubResource("ButtonGroup_nlbfj")
+text = "answer 1"
+autowrap_mode = 3
+
+[node name="Answer2" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+custom_minimum_size = Vector2(300, 85)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+keep_pressed_outside = true
+button_group = SubResource("ButtonGroup_nlbfj")
+text = "answer 1"
+autowrap_mode = 3
+
+[node name="Answer3" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+custom_minimum_size = Vector2(300, 85)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+keep_pressed_outside = true
+button_group = SubResource("ButtonGroup_nlbfj")
+text = "answer 1"
+autowrap_mode = 3
+
+[node name="Answer4" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
+custom_minimum_size = Vector2(300, 85)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ij2e0")
+toggle_mode = true
+keep_pressed_outside = true
+button_group = SubResource("ButtonGroup_nlbfj")
+text = "answer 1answer 1answer 1answer 1answer 1"
+autowrap_mode = 3
+
 [node name="MediaContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
-visible = false
 self_modulate = Color(0.431373, 0.431373, 0.431373, 0)
-custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Photo" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -81,14 +152,15 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="AudioContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MediaContainer"]
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 50
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="PlayButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -102,8 +174,22 @@ stretch_mode = 0
 [node name="Audio" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer/PlayButton"]
 volume_db = 4.0
 
+[node name="AudioTimer" type="HSlider" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_ij2e0")
+step = 0.001
+
+[node name="AudioTrackTime" type="Label" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
+layout_mode = 2
+theme = ExtResource("1_ij2e0")
+text = "0:33/1:20"
+horizontal_alignment = 2
+
 [node name="kun" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -111,84 +197,16 @@ theme = ExtResource("1_ij2e0")
 texture = ExtResource("6_dyeug")
 expand_mode = 1
 
-[node name="AudioTimer" type="HSlider" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
-custom_minimum_size = Vector2(400, 0)
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("1_ij2e0")
-step = 0.001
-
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="AnswerContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
-layout_mode = 2
-size_flags_vertical = 4
-theme = ExtResource("1_ij2e0")
-theme_override_constants/h_separation = 10
-theme_override_constants/v_separation = 10
-columns = 2
-
-[node name="Answer1" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
-custom_minimum_size = Vector2(300, 25)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("1_ij2e0")
-toggle_mode = true
-keep_pressed_outside = true
-button_group = SubResource("ButtonGroup_nlbfj")
-text = "answer 1"
-autowrap_mode = 3
-
-[node name="Answer2" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
-custom_minimum_size = Vector2(300, 25)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("1_ij2e0")
-toggle_mode = true
-keep_pressed_outside = true
-button_group = SubResource("ButtonGroup_nlbfj")
-text = "answer 1"
-autowrap_mode = 3
-
-[node name="Answer3" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
-custom_minimum_size = Vector2(300, 25)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("1_ij2e0")
-toggle_mode = true
-keep_pressed_outside = true
-button_group = SubResource("ButtonGroup_nlbfj")
-text = "answer 1"
-autowrap_mode = 3
-
-[node name="Answer4" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/AnswerContainer"]
-custom_minimum_size = Vector2(300, 25)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("1_ij2e0")
-toggle_mode = true
-keep_pressed_outside = true
-button_group = SubResource("ButtonGroup_nlbfj")
-text = "answer 1answer 1answer 1answer 1answer 1"
-autowrap_mode = 3
-
-[node name="Question" type="Label" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 60)
-layout_mode = 2
-size_flags_vertical = 1
-theme = ExtResource("1_ij2e0")
-text = "Alena Převrátilová v Dismanově souboru působí coby producentka od roku 2021. Dle komiksové kresby člena Teodora Slámy dokáže zařídit i nemožné."
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+texture = ExtResource("8_1keyp")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="AnswerConfirm" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(270, 95)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_ij2e0")
@@ -204,6 +222,18 @@ text = "Alena Převrátilová v Dismanově souboru působí coby producentka od 
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="VyberZe4" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.592157)
+position = Vector2(539, 359)
+texture = ExtResource("9_ea7go")
+
+[node name="VyberZe5" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.592157)
+position = Vector2(539, 359)
+texture = ExtResource("9_hio1y")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MediaContainer/AudioContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/MediaContainer/AudioContainer/AudioTimer" to="." method="_on_audio_timer_value_changed"]
