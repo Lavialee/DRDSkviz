@@ -23,7 +23,7 @@ correct_answer_text = "Jan Berger"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "Bergerovy hry se v rozhlase dodnes reprízují. Patří mezi ně například Alabastrová ručička nebo Krajkářská pohádka."
+answer_info = "Bergerovy hry se v rozhlase dodnes reprízují. Patří mezi ně například [i]Alabastrová ručička[/i] nebo [i]Krajkářská pohádka[/i]."
 
 [sub_resource type="Resource" id="Resource_wxwqw"]
 script = ExtResource("1_c6f28")
@@ -111,7 +111,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Broučci se dočkali celkem 332. repríz. Z výtěžku bylo zaplaceno první letní soustředění v roce 1944"
+answer_info = "Broučci se dočkali celkem 332 repríz. Z výtěžku bylo zaplaceno první letní soustředění v roce 1944"
 
 [sub_resource type="Resource" id="Resource_njr5b"]
 script = ExtResource("1_c6f28")
@@ -188,7 +188,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Bratři v poli je inscenace režírovaná aktuální uměleckou vedoucí Magdalenou Gracerovou Chrzovou."
+answer_info = "[i]Bratři v poli[/i] je inscenace režírovaná aktuální uměleckou vedoucí Magdalenou Gracerovou Chrzovou."
 
 [sub_resource type="Resource" id="Resource_din8t"]
 script = ExtResource("1_c6f28")
@@ -221,7 +221,7 @@ correct_answer_text = "Libor Bouček"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "Spoluzakladatel rádia DISS Nikola Hořejš v rozhovoru se současnými Dismančaty Boučka popsal jako zuřivého reportéra, který byl schopný nashromáždit nepředstavitelné množství vysílacího materiálu."
+answer_info = "Spoluzakladatel rádia DISS Nikola Hořejš v rozhovoru se současnými Dismančaty popsal Boučka jako zuřivého reportéra, který byl schopný nashromáždit nepředstavitelné množství vysílacího materiálu."
 
 [sub_resource type="Resource" id="Resource_cx61y"]
 script = ExtResource("1_c6f28")
@@ -232,7 +232,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Ekvivalentem objevu roku by teoreticky mohla být cena Nováček roku. Ta se na táboře uděluje Dismančeti, které nejlépe zvládne svou úvodní souborovou sezónu. "
+answer_info = "Ekvivalentem objevu roku by teoreticky mohla být cena [i]Nováček roku[/i]. Ta se na táboře uděluje Dismančeti, které nejlépe zvládne svou úvodní souborovou sezónu. "
 
 [sub_resource type="Resource" id="Resource_uusqo"]
 script = ExtResource("1_c6f28")
@@ -254,11 +254,11 @@ correct_answer_text = ""
 question_type = 0
 media_path = "res://media/questions/Otazka22_zvuk.mp3"
 media_source = "ApF ČRo"
-answer_info = "Na nahrávce Jana popisuje, jak nahlíží na práci se členy Dismanova souboru. Záznam vznikl pro účely bakalářského rozhlasového dokumentu Josefa Kaňky, během posledních let jsme ale tato Janina slova mohli také několikrát slyšet ve vysílání Českého rozhlasu."
+answer_info = "Na nahrávce Jana popisuje, jak nahlíží na práci se členy Dismanova souboru. Záznam vznikl pro účely bakalářského rozhlasového dokumentu Josefa Kaňky - během posledních let jsme ale tato Janina slova mohli také několikrát slyšet ve vysílání Českého rozhlasu."
 
 [sub_resource type="Resource" id="Resource_hsrn2"]
 script = ExtResource("1_c6f28")
-question_text = "Se kterým věhlasným rozhlasovým režisérem, kterému se přezdívalo „pohádkář český” spolupracoval Dismanův soubor již od éry Miloslava Dismana?"
+question_text = "Se kterým věhlasným rozhlasovým režisérem, kterému se přezdívalo [i]„pohádkář český”[/i] spolupracoval Dismanův soubor již od éry Miloslava Dismana?"
 answers = Array[String](["s Jiřím Horčičkou", "s Karlem Weinlichem", "s Alešem Vrzákem", "s Janem Fuchsem"])
 correct_answer_index = 1
 correct_answer_text = ""
@@ -287,7 +287,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Jandlově poezii se Vlastimil Kaňka věnoval již v rámci vlastivědné olympiády v roce 2019. Pro Dismančata též občas připravuje různé rozhlasové pořady. U příležitosti 90. výročí například vznikla v jeho režii nová adaptace Karafiátových Broučků."
+answer_info = "Jandlově poezii se Vlastimil Kaňka věnoval již v rámci vlastivědné olympiády v roce 2019. Pro Dismančata též občas připravuje různé rozhlasové pořady. U příležitosti 90. výročí například vznikla v jeho režii nová adaptace [i]Karafiátových Broučků.[/i]"
 
 [sub_resource type="Resource" id="Resource_mdmn6"]
 script = ExtResource("1_c6f28")
@@ -298,7 +298,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Jiří Konvalinka se též věnuje herectví. V souboru jsme mohli sledovat i jeho režisérské dovednosti. Společně s Týnou Průchovou například vedli souborovou adaptaci Klicperovy Veselohry na mostě v roce 2005."
+answer_info = "Jiří Konvalinka se též věnuje herectví. V souboru jsme mohli sledovat i jeho režisérské dovednosti. Společně s Týnou Průchovou například vedli souborovou adaptaci Klicperovy [i]Veselohry na mostě[/i] v roce 2005."
 
 [sub_resource type="Resource" id="Resource_yfic1"]
 script = ExtResource("1_c6f28")
@@ -309,7 +309,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Pavla Horáková navštěvovala Dismanův soubor v éře sbormistra Jana Bergera. O svých zážitcích z DRDS vyprávěla mimo jiné v pořadu Zpátky do studia, který je stále k poslechu na našich webových stránkách"
+answer_info = "Pavla Horáková navštěvovala Dismanův soubor v éře sbormistra Jana Bergera. O svých zážitcích z DRDS vyprávěla mimo jiné v pořadu [i]Zpátky do studia[/i], který je stále k poslechu na našich webových stránkách"
 
 [sub_resource type="Resource" id="Resource_5t8s0"]
 script = ExtResource("1_c6f28")
@@ -331,7 +331,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Inscenaci Bratři v poli připravila podle stejnojmenné knihy básnířky a spisovatelky Jany Šrámkové. Na představení spolupracovala s mladším souborem. Debutové premiéře předcházela ještě drobnější jevištní inscenace 3D s dívkami ze STARS."
+answer_info = "Inscenaci [i]Bratři v poli[/i] připravila podle stejnojmenné knihy básnířky a spisovatelky Jany Šrámkové. Na představení spolupracovala s mladším souborem. Debutové premiéře předcházela ještě drobnější jevištní inscenace 3D s dívkami ze STARS."
 
 [sub_resource type="Resource" id="Resource_i285w"]
 script = ExtResource("1_c6f28")
@@ -375,7 +375,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = "res://media/questions/Otazka33_zvuk.mp3"
 media_source = ""
-answer_info = "Představení poskládala Jana Doležalová Franková z básní a textů Ivana Martina Jirouse. Pásmo se rovněž dočkalo rozhlasové adaptace"
+answer_info = "Představení poskládala Jana Doležalová Franková z básní a textů Ivana Martina Jirouse. Pásmo se rovněž dočkalo rozhlasové adaptace."
 
 [sub_resource type="Resource" id="Resource_w7ghc"]
 script = ExtResource("1_c6f28")
@@ -408,7 +408,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Úplně prvním počinem byla stylizovaná reportáž Podblanické děti návštěvou v Praze, tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband Tatínek pracuje v továrně"
+answer_info = "Úplně prvním počinem byla stylizovaná reportáž Podblanické děti návštěvou v Praze, tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband Tatínek pracuje v továrně."
 
 [sub_resource type="Resource" id="Resource_llghs"]
 script = ExtResource("1_c6f28")
@@ -419,7 +419,7 @@ correct_answer_text = "Tatínek pracuje v továrně"
 question_type = 1
 media_path = "res://media/questions/Otazka37_zvuk.mp3"
 media_source = ""
-answer_info = "Úplně prvním počinem byla stylizovaná reportáž Podblanické děti návštěvou v Praze, tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband Tatínek pracuje v továrně;"
+answer_info = "Úplně prvním počinem byla stylizovaná reportáž [i]Podblanické děti návštěvou v Praze[/i], tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband [i]Tatínek pracuje v továrně[/i]."
 
 [sub_resource type="Resource" id="Resource_7j36y"]
 script = ExtResource("1_c6f28")
@@ -430,7 +430,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Hymnu DRDS doplnila na souborovém repertoáru v roce 2023 táborová píseň Červánky z Broučkiád, která se zpívá každý den před spaním."
+answer_info = "Hymnu DRDS doplnila na souborovém repertoáru v roce 2023 táborová píseň [i]Červánky z Broučkiád[/i], která se zpívá každý den před spaním."
 
 [sub_resource type="Resource" id="Resource_le46d"]
 script = ExtResource("1_c6f28")
@@ -496,7 +496,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "První zájezd do Velké Británie trval přes deset týdnů a Dismančata se objevila i ve vysílání BBC. Návštěva v roce 2009 byla výrazně kratší. Týdenní pobyt provázely reprízy dětské opery Brundibár."
+answer_info = "První zájezd do Velké Británie trval přes deset týdnů a Dismančata se objevila i ve vysílání BBC. Návštěva v roce 2009 byla výrazně kratší. Týdenní pobyt provázely reprízy dětské opery [i]Brundibár.[/i]"
 
 [sub_resource type="Resource" id="Resource_cdqxb"]
 script = ExtResource("1_c6f28")
@@ -562,7 +562,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Zdeněk se v souboru roky staral o technickou přípravu večerních programů. Již v té době společně s kolegou Jakubem Štěpánem založili firmu Oldservis (dnes Stagelab), která se stará právě o technické zajištění různých akcí. Zdeněk též dlouhou dobu působil na Chodovské tvrzi nebo v Divadle v Celetné."
+answer_info = "Zdeněk se v souboru roky staral o technickou přípravu večerních programů. Již v té době společně s kolegou Jakubem Štěpánem založili firmu [i]Oldservis[/i] (dnes [i]Stagelab[/i]), která se stará právě o technické zajištění různých akcí. Zdeněk též dlouhou dobu působil na Chodovské tvrzi nebo v Divadle v Celetné."
 
 [sub_resource type="Resource" id="Resource_8cknp"]
 script = ExtResource("1_c6f28")
@@ -595,7 +595,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Ivan Jandl získal Oscara za dětskou roli ve filmu Poznamenaní. Oceněn byl i prestižním Zlatým glóbem."
+answer_info = "Ivan Jandl získal Oscara za dětskou roli ve filmu [i]Poznamenaní[/i]. Oceněn byl i prestižním Zlatým glóbem."
 
 [sub_resource type="Resource" id="Resource_byl6s"]
 script = ExtResource("1_c6f28")
@@ -606,7 +606,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = "res://media/questions/Otazka54_zvuk.wav"
 media_source = ""
-answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film Poznamenaní z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
+answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film [i]Poznamenaní[/i] z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
 
 [sub_resource type="Resource" id="Resource_yppbu"]
 script = ExtResource("1_c6f28")
@@ -617,7 +617,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = "res://media/questions/Otazka55_foto, zdroj film Poznamenani.png"
 media_source = "film Poznamenaní"
-answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film Poznamenaní z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
+answer_info = "Ivan Jandl je jediným souborovým držitelem Oscara a Zlatého glóbu. Ocenění získal za film [i]Poznamenaní[/i] z roku 1948. Poté měly o natáčení s Jandlem zájem i další světové produkce, československé úřady mu to ale znemožnily. Objevil se jen v několika menších rolích tuzemských filmů."
 
 [sub_resource type="Resource" id="Resource_wdng1"]
 script = ExtResource("1_c6f28")
@@ -639,7 +639,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Matěj Převrátil získal cenu v roce 2016 za roli Finna Baxtera ve filmu Sám doma 5: Velká vánoční loupež"
+answer_info = "Matěj Převrátil získal cenu v roce 2016 za roli Finna Baxtera ve filmu [i]Sám doma 5: Velká vánoční loupež[/i]"
 
 [sub_resource type="Resource" id="Resource_vpe0e"]
 script = ExtResource("1_c6f28")
@@ -661,7 +661,7 @@ correct_answer_text = "Pražský filmový kufr"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "První ročník se uskutečnil v roce 2016. Mezi oceněné filmy z DRDS dílny patří například A co jsem zdědila já?, Muchovci, Alenka v říši divů nebo 90 let paní K"
+answer_info = "První ročník se uskutečnil v roce 2016. Mezi oceněné filmy z DRDS dílny patří například [i]A co jsem zdědila já?[/i], [i]Muchovci[/i], [i]Alenka v říši divů[/i] nebo [i]90 let paní K[/i]"
 
 [sub_resource type="Resource" id="Resource_g4dlb"]
 script = ExtResource("1_c6f28")
@@ -672,7 +672,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Diář DRDS se vysílal každou poslední neděli v měsíci v dopoledních hodinách."
+answer_info = "[i]Diář DRDS[/i] se vysílal každou poslední neděli v měsíci v dopoledních hodinách."
 
 [sub_resource type="Resource" id="Resource_75dhd"]
 script = ExtResource("1_c6f28")
@@ -694,7 +694,7 @@ correct_answer_text = "Jan Hnilička"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "Jan Hnilička se členy přezkušoval představení Zpověď Jonatána Papírníka a …a bolelo nebe. Zkoušení odborně zaštiťovala i sestra Jany Frankové Hana Hniličková."
+answer_info = "Jan Hnilička se členy přezkušoval představení [i]Zpověď Jonatána Papírníka[/i] a [i]…a bolelo nebe[/i]. Zkoušení odborně zaštiťovala i sestra Jany Frankové Hana Hniličková."
 
 [sub_resource type="Resource" id="Resource_kut3x"]
 script = ExtResource("1_c6f28")
@@ -716,7 +716,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Od roku 1990 vzniklo pod Fleglovic vedením přes třicet divadelních inscenací i řada rozhlasových výstupů. Nejdéle se na repertoáru držela dětská opera Brundibár, se kterou soubor často vystupoval i v zahraničí."
+answer_info = "Od roku 1990 vzniklo pod Fleglovic vedením přes třicet divadelních inscenací i řada rozhlasových výstupů. Nejdéle se na repertoáru držela dětská opera [i]Brundibár[/i], se kterou soubor často vystupoval i v zahraničí."
 
 [sub_resource type="Resource" id="Resource_njt6y"]
 script = ExtResource("1_c6f28")
@@ -760,11 +760,11 @@ correct_answer_text = "Aťka Janoušková"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "Aťka Janoušková vedle Kouzelného doktora nazpívala třeba i písně Králíček Azurit nebo Spadla kroupa do kraje. V roce 2009 též získala Cenu Františka Filipovského za celoživotní mistrovství v dabingu. Mezi její nejznámější role patří například Včelka Mája."
+answer_info = "Aťka Janoušková vedle [i]Kouzelného doktora[/i] nazpívala třeba i písně [i]Králíček Azurit[/i] nebo [i]Spadla kroupa do kraje[/i]. V roce 2009 též získala Cenu Františka Filipovského za celoživotní mistrovství v dabingu. Mezi její nejznámější role patří například Včelka Mája."
 
 [sub_resource type="Resource" id="Resource_pfeh3"]
 script = ExtResource("1_c6f28")
-question_text = "Skladba Zázračný doktor, jejíž část si zde můžete poslechnout, byla nazpívána i otextována bývalými Dismančaty. O kterou z uvedených dvojic se jedná?"
+question_text = "Skladba [i]Zázračný doktor[/i], jejíž část si zde můžete poslechnout, byla nazpívána i otextována bývalými Dismančaty. O kterou z uvedených dvojic se jedná?"
 answers = Array[String](["Aťka Janoušková a Pavel Kohout", "Gabriela Osvaldová a Zdeněk Borovec", "Aťka Janoušková a Zdeněk Borovec", "Alena Vránová a Petr Kopta"])
 correct_answer_index = 2
 correct_answer_text = ""
@@ -786,7 +786,7 @@ answer_info = "Dalším uznávaným souborovým textařem je například Pavel K
 
 [sub_resource type="Resource" id="Resource_4atr2"]
 script = ExtResource("1_c6f28")
-question_text = "Pradědeček a loupežníci, Shakesappeal aneb Míchaný půvab či Černošský Pán Bůh a páni Izraeliti. Pod těmito inscenacemi, které soubor uváděl mezi lety 1993-2000, je režijně podepsán Zdeněk Bartoš. Ten aktuálně působí jako umělecký šéf a režisér jedné západočeské divadelní scény. Ve kterém městě? "
+question_text = "[i]Pradědeček a loupežníci[/i], [i]Shakesappeal aneb Míchaný půvab[/i] či [i]Černošský Pán Bůh a páni Izraeliti[/i]. Pod těmito inscenacemi, které soubor uváděl mezi lety 1993-2000, je režijně podepsán Zdeněk Bartoš. Ten aktuálně působí jako umělecký šéf a režisér jedné západočeské divadelní scény. Ve kterém městě? "
 answers = Array[String](["Cheb", "Plzeň", "Klatovy", "Tachov"])
 correct_answer_index = 0
 correct_answer_text = ""
@@ -804,7 +804,7 @@ correct_answer_text = "Denisa Barešová"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "Denisa navštěvovala DRDS od roku 2005. Zahrála si například postavu Aninky v Brundibárovi, kterou jsme v jejím podání mohli vidět i ve Švédsku, Francii nebo Anglii."
+answer_info = "Denisa navštěvovala DRDS od roku 2005. Zahrála si například postavu Aninky v /i]Brundibárovi[/i], kterou jsme v jejím podání mohli vidět i ve Švédsku, Francii nebo Anglii."
 
 [sub_resource type="Resource" id="Resource_7pl7w"]
 script = ExtResource("1_c6f28")
@@ -815,11 +815,11 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Název OLDstars odkazuje na označení staršího souboru, které v Dismaňáku roky používáme. V čele umělecké skupiny stojí už téměř 25 let jeden ze zakladatelů Tomáš Staněk."
+answer_info = "Název [i]OLDstars[/i] odkazuje na označení staršího souboru, které v Dismaňáku roky používáme. V čele umělecké skupiny stojí už téměř 25 let jeden ze zakladatelů Tomáš Staněk."
 
 [sub_resource type="Resource" id="Resource_mraww"]
 script = ExtResource("1_c6f28")
-question_text = "Jak se jmenuje principál umělecké skupiny OLDstars, kterou v roce 2002 založili absolventi DRDS, aby se mohli dále divadelně realizovat?"
+question_text = "Jak se jmenuje principál umělecké skupiny [i]OLDstars[/i], kterou v roce 2002 založili absolventi DRDS, aby se mohli dále divadelně realizovat?"
 answers = Array[String]([])
 correct_answer_index = -1
 correct_answer_text = "Tomáš Staněk"
@@ -841,7 +841,7 @@ answer_info = "Během pobytu děti bydlely u místních rodin. V rozhovoru, kter
 
 [sub_resource type="Resource" id="Resource_na2if"]
 script = ExtResource("1_c6f28")
-question_text = "Na doporučení Miloslava Dismana natočila v roce 1950 členka DRDS Zdeňka Ptáčková (později Harcubová) jeden z dialogů pro známou sérii Čochtan vypravuje. Se kterým legendárním hercem tehdy dialog vedla?"
+question_text = "Na doporučení Miloslava Dismana natočila v roce 1950 členka DRDS Zdeňka Ptáčková (později Harcubová) jeden z dialogů pro známou sérii [i]Čochtan vypravuje[/i]. Se kterým legendárním hercem tehdy dialog vedla?"
 answers = Array[String](["Jan Werich", "Jiří Adamíra", "Karel Höger", "Vlastimil Brodský"])
 correct_answer_index = 0
 correct_answer_text = ""
@@ -852,7 +852,7 @@ answer_info = ""
 
 [sub_resource type="Resource" id="Resource_lsmcm"]
 script = ExtResource("1_c6f28")
-question_text = "V roce 1996 vyšlo CD s názvem Zobáky, na kterém Dismančata spolupracovala s uznávanou českou jazzovou zpěvačkou a skladatelkou. Jak se jmenovala?"
+question_text = "V roce 1996 vyšlo CD s názvem [i]Zobáky[/i], na kterém Dismančata spolupracovala s uznávanou českou jazzovou zpěvačkou a skladatelkou. Jak se jmenovala?"
 answers = Array[String]([])
 correct_answer_index = -1
 correct_answer_text = "Jana Koubková"
@@ -892,7 +892,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "ohumil Kolář byl jednou z nejvýraznějších osobností dětské a mládežnické publicistiky. V 80. letech byl coby šéf HRDM u vzniku legendárního pořadu Domino. Jeho největší vášní byl však přírodovědecký magazín Meteor, kam se snažil pravidelně přispívat, i když už byl zavalen šéfredaktorskými papíry."
+answer_info = "Bohumil Kolář byl jednou z nejvýraznějších osobností dětské a mládežnické publicistiky. V 80. letech byl coby šéf HRDM u vzniku legendárního pořadu Domino. Jeho největší vášní byl však přírodovědecký magazín [i]Meteor[/i], kam se snažil pravidelně přispívat, i když už byl zavalen šéfredaktorskými papíry."
 
 [sub_resource type="Resource" id="Resource_7mmvk"]
 script = ExtResource("1_c6f28")
@@ -903,7 +903,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = ""
 media_source = ""
-answer_info = "Charmsovy Vánoce u Ivanovových byly v podání asistentů a členů DRDS k vidění pouze na táborových ozvěnách v roce 2022. Tehdy se krátká pasáž zpracovávala v rámci divadelního večera."
+answer_info = "Charmsovy [i]Vánoce u Ivanovových[/i] byly v podání asistentů a členů DRDS k vidění pouze na táborových ozvěnách v roce 2022. Tehdy se krátká pasáž zpracovávala v rámci divadelního večera."
 
 [sub_resource type="Resource" id="Resource_avii1"]
 script = ExtResource("1_c6f28")
@@ -958,7 +958,7 @@ correct_answer_text = "Martin Luhan"
 question_type = 1
 media_path = ""
 media_source = ""
-answer_info = "Martin Steve Luhan dlouho v souboru působil i jako asistent. S dětmi nastudoval například představení Příšerky a příšeři a na letních soustředěních byl jedním z největších popularizátorů karetní hry Magic the Gathering. "
+answer_info = "Martin Steve Luhan dlouho v souboru působil i jako asistent. S dětmi nastudoval například představení [i]Příšerky a příšeři[/i] a na letních soustředěních byl jedním z největších popularizátorů karetní hry Magic the Gathering. "
 
 [sub_resource type="Resource" id="Resource_r1e0q"]
 script = ExtResource("1_c6f28")
@@ -991,7 +991,7 @@ correct_answer_text = ""
 question_type = 0
 media_path = "res://media/questions/Otazka89_foto, zdroj Vaclav Flegl.jpeg"
 media_source = "Václav Flegl"
-answer_info = "Dětskou operu Brundibár nastudovala s DRDS Zdena Fleglová. S představením soubor pravidelně jezdil do Terezína, kde ji hrály židovské děti ve 40. letech. S Brundibárem Dismančata několikrát vyjela také do zahraničí."
+answer_info = "Dětskou operu [i]Brundibár[/i] nastudovala s DRDS Zdena Fleglová. S představením soubor pravidelně jezdil do Terezína, kde ji hrály židovské děti ve 40. letech. S [i]Brundibárem[/i] Dismančata několikrát vyjela také do zahraničí."
 
 [sub_resource type="Resource" id="Resource_jl2wi"]
 script = ExtResource("1_c6f28")

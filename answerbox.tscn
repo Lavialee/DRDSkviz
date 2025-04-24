@@ -1,28 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsq1klj5qauab"]
+[gd_scene load_steps=7 format=3 uid="uid://dsq1klj5qauab"]
+
+[ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_7yq38"]
+[ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="2_7pe0g"]
+[ext_resource type="FontFile" uid="uid://de4jr7rpa4npa" path="res://font/calibri-italic.ttf" id="2_mq4lj"]
+[ext_resource type="FontFile" uid="uid://dyuj63s622r2" path="res://font/calibri-bold.ttf" id="3_fin6f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq4lj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tydki"]
-bg_color = Color(0.0980392, 0.156863, 0.501961, 1)
+bg_color = Color(0.1, 0.16, 0.5, 0.901961)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
+expand_margin_left = 25.0
+expand_margin_top = 25.0
+expand_margin_right = 25.0
+expand_margin_bottom = 25.0
 
 [node name="Answer" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -680.0
+offset_bottom = -523.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mq4lj")
 
 [node name="ColorRect" type="Panel" parent="PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tydki")
 
-[node name="TextEdit" type="Label" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
-text = "INFORMACCE K ODPOVĚDI NA OTÁZKU
-"
+theme_override_constants/separation = 20
+
+[node name="TextEdit" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_7yq38")
+theme_override_fonts/italics_font = ExtResource("2_mq4lj")
+theme_override_fonts/bold_italics_font = ExtResource("3_fin6f")
+theme_override_fonts/bold_font = ExtResource("3_fin6f")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "Zdeněk se v souboru roky staral o technickou přípravu večerních programů. Již v té době společně s kolegou Jakubem Štěpánem založili firmu Oldservis (dnes Stagelab), která se stará právě o technické zajištění různých akcí. Zdeněk též dlouhou dobu působil na Chodovské tvrzi nebo v Divadle v Celetné."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextQuestion" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_7pe0g")
+text = "Další otázka"
