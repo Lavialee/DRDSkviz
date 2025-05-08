@@ -42,7 +42,7 @@ func _ready() -> void:
 	# Assign buttons to the ButtonGroup
 	for button in buttons:
 		button.set_button_group(answer_group)
-
+	$
 	# Start the game
 	choose_questions()
 	current_question_handling()

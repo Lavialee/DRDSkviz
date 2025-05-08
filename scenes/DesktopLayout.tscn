@@ -98,6 +98,7 @@ theme_override_constants/separation = 20
 alignment = 2
 
 [node name="MediaContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
 self_modulate = Color(0.431373, 0.431373, 0.431373, 0)
 layout_mode = 2
 size_flags_horizontal = 4
