@@ -1,7 +1,7 @@
 extends Resource
 class_name Question
 
-enum QuestionType { MULTIPLE_CHOICE, TEXT_INPUT, ARRANGE}
+enum QuestionType { MULTIPLE_CHOICE, TEXT_INPUT}
 
 @export var question_text: String
 @export var answers: Array[String] = [] # For multiple-choice questions

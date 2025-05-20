@@ -29,6 +29,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Label" type="Label" parent="AnswerGrid/Button2"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 22.3333
 
@@ -38,6 +39,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Label" type="Label" parent="AnswerGrid/Button3"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 22.3333
 
@@ -47,10 +49,12 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Label" type="Label" parent="AnswerGrid/Button4"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 22.3333
 
 [node name="QuestionLabel" type="Label" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 22.3333
 

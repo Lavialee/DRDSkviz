@@ -1,4 +1,6 @@
 extends Node
+var question_data = preload("res://all_questions.tres")
+var selected_questions: Array = []
 
 var test_cases = [
 	["ano", "ano", true],
@@ -9,9 +11,18 @@ var test_cases = [
 	["Tohle je správná odpověď","Tohle ej správná opdoved", true],
 	["odpoved", "answer", false]
 	]
+func choose_questions() -> void: 
+	var all_questions = question_data.questions.filter(func(q):
+		return q.question_type == q.QuestionType.TEXT_INPUT) 
+	all_questions.shuffle()
+	selected_questions = all_questions.slice(0, 10)  # Select the first 10 elements
+	print(selected_questions[0].question_text)
+
 
 func _ready() -> void:
+	choose_questions()
 	run_tests()
+
 
 func check_answer(expected_answer:String, actual_answer:String) -> bool:
 	var ts = TextServerManager.get_primary_interface()
@@ -20,12 +31,10 @@ func check_answer(expected_answer:String, actual_answer:String) -> bool:
 	actual_answer = actual_answer.to_lower()
 	expected_answer = expected_answer.to_lower()
 	var distance = edit_distance(expected_answer, actual_answer)
-	if distance > max(2,expected_answer.length()/3):
+	if distance > max(2, int(expected_answer.length() / 3)):
 		return false
 	else:
 		return true
-
-	return actual_answer == expected_answer
 
 func edit_distance(s1: String, s2: String) -> int:
 	var len1 = s1.length()

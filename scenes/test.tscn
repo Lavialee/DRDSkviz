@@ -14,6 +14,25 @@ script = ExtResource("1_g074l")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0
-offset_right = 431.0
-offset_bottom = 133.0
+offset_left = 35.0
+offset_top = 101.0
+offset_right = 1042.0
+offset_bottom = 618.0
 script = ExtResource("2_bl13t")
+
+[node name="Label" type="RichTextLabel" parent="TextEdit"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 303.0
+offset_right = 995.0
+offset_bottom = 385.0
+text = "asdfasdf
+"
+
+[node name="Expected" type="RichTextLabel" parent="TextEdit"]
+offset_left = 19.0
+offset_top = 440.0
+offset_right = 207.0
+offset_bottom = 491.0
+text = "asdfasdf
+"
