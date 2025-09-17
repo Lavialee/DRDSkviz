@@ -112,7 +112,6 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="AudioContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MediaContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 size_flags_horizontal = 4

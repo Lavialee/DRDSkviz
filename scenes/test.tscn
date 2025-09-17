@@ -30,6 +30,7 @@ text = "asdfasdf
 "
 
 [node name="Expected" type="RichTextLabel" parent="TextEdit"]
+layout_mode = 0
 offset_left = 19.0
 offset_top = 440.0
 offset_right = 207.0
