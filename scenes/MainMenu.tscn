@@ -21,8 +21,8 @@ script = ExtResource("1_aivek")
 self_modulate = Color(1, 1, 1, 0.301961)
 texture_repeat = 2
 material = ExtResource("2_l72w3")
-position = Vector2(817, 517.5)
-scale = Vector2(1.48, 1.27927)
+position = Vector2(567.9111, 356.99963)
+scale = Vector2(1.027111, 0.8878057)
 texture = ExtResource("3_826wr")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
