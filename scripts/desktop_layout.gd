@@ -141,16 +141,26 @@ func _process(_delta):
 	#
 func choose_questions() -> void:
 	var all_questions = question_data.questions
-
+	# Filter by difficulty
+	var selected_difficulty = GameSettings.get_difficulty()
+	all_questions = all_questions.filter(
+		func(q):
+			return q.difficulty == selected_difficulty
+	)
 	if only_media_questions:
 		# Filter only the questions that have media_path
 		all_questions = all_questions.filter(
 			func(q):
 				return not q.media_path.is_empty()
 		)
-	
+	# Check if we have enough questions
+	if all_questions.size() < QUESTIONS_PER_GAME:
+		push_warning("Not enough questions for selected difficulty! Found: " + str(all_questions.size()))
+		# Fallback: use all available questions or handle error
+
 	all_questions.shuffle()
 	selected_questions = all_questions.slice(0, QUESTIONS_PER_GAME)
+	
 func current_question_handling() -> void:
 	if current_question_index >= selected_questions.size():
 		show_score()
@@ -185,11 +195,27 @@ func _setup_input_question() -> void:
 	
 
 func multiple_choice_shuffle() -> void:
-	var correct_text = current_question.answers[current_question.correct_answer_index]
+	# Get all correct answer texts
+	var correct_texts = []
+	for idx in current_question.correct_answer_indices:
+		correct_texts.append(current_question.answers[idx])
+
 	current_question.answers.shuffle()
-	current_question.correct_answer_index = current_question.answers.find(correct_text)
-	correct_answer_index = current_question.correct_answer_index # Just store the index
-	print("The correct answer index is: ", correct_answer_index)
+
+	# Find new indices for all correct answers
+	var new_correct_indices = []
+	for text in correct_texts:
+		new_correct_indices.append(current_question.answers.find(text))
+
+	# OLD - This causes the error:
+	# current_question.correct_answer_indices = new_correct_indices
+	
+	# NEW - Modify the array in place:
+	current_question.correct_answer_indices.clear()
+	for idx in new_correct_indices:
+		current_question.correct_answer_indices.append(idx)
+	
+	correct_answer_index = current_question.correct_answer_indices[0]  # Store first correct index for compatibility
 
 func show_new_question() -> void:
 	showing_answer = false
@@ -276,6 +302,7 @@ func _reset_audio_state() -> void:
 		audio_streamer.stop()
 	paused_position = 0.0
 	slider.value = 0.0
+	play_button.button_pressed = false
 	_update_time_label()
 
 func _is_image_question() -> bool:
@@ -323,7 +350,8 @@ func _assign_text_answers(answers: Array[String]) -> void:
 func show_answer(pressed_button: Button) -> void:
 	_disable_all_buttons()
 	
-	if pressed_button == buttons[correct_answer_index]:
+	var button_index = buttons.find(pressed_button)
+	if button_index in current_question.correct_answer_indices:
 		_handle_correct_answer(pressed_button)
 	else:
 		_handle_wrong_answer(pressed_button)
@@ -551,8 +579,16 @@ func _handle_input_answer_confirmation() -> void:
 		push_warning("No answer entered!")
 		return
 	
-	var result = check_input_answer(current_question.correct_answer_text, actual_answer)
-	_update_confirm_label_for_result(result)
+	var best_result = InputAnswerMatch.WRONG
+	for idx in current_question.correct_answer_indices:
+		var correct_text = current_question.answers[idx]
+		var result = check_input_answer(correct_text, actual_answer)
+		if result == InputAnswerMatch.CORRECT:
+			best_result = InputAnswerMatch.CORRECT
+			break
+		elif result == InputAnswerMatch.ADEQUATE and best_result == InputAnswerMatch.WRONG:
+			best_result = InputAnswerMatch.ADEQUATE
+	_update_confirm_label_for_result(best_result)
 	
 	showing_answer = true
 	answer_input.clear()
@@ -567,8 +603,8 @@ func _update_confirm_label_for_result(result: InputAnswerMatch) -> void:
 			confirm_label.add_theme_stylebox_override("disabled", load("res://shaders/wrong_answer.tres"))
 
 		InputAnswerMatch.WRONG:
-			confirm_label.text = "Špatně. Správná odpověď: " + current_question.correct_answer_text
-			confirm_label.add_theme_stylebox_override("disabled", load("res://shaders/correct_answer.tres"))
+			var correct_text = current_question.answers[current_question.correct_answer_indices[0]]
+			confirm_label.text = "Špatně. Správná odpověď: " + correct_text
 
 func _next_question() -> void:
 	show_new_question()

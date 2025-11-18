@@ -27,7 +27,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ha3lu")
-only_media_questions = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
