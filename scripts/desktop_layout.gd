@@ -5,7 +5,7 @@ extends Control
 # ============================================================================
 
 const QUESTIONS_PER_GAME = 10
-const ANSWER_DELAY_SECONDS = 1.0
+const ANSWER_DELAY_SECONDS = 0.6
 const AUDIO_SLIDER_STEP = 0.01
 
 enum InputAnswerMatch {
@@ -14,6 +14,7 @@ enum InputAnswerMatch {
 	CORRECT
 }
 
+@export var only_media_questions: bool = false
 # ============================================================================
 # NODE REFERENCES
 # ============================================================================
@@ -21,15 +22,19 @@ enum InputAnswerMatch {
 # UI Elements
 @onready var question_label = $MarginContainer/VBoxContainer/Question
 @onready var answer_container = $MarginContainer/VBoxContainer/CenterContainer/AnswerContainer
+@onready var center_container = $MarginContainer/VBoxContainer/CenterContainer
 @onready var score_label = $HBoxContainer/ScoreNumber
 @onready var confirm_label = $MarginContainer/VBoxContainer/AnswerConfirm
 @onready var answer_input = $MarginContainer/VBoxContainer/AnswerInput
+
 
 # Media Elements
 @onready var media_container = $MarginContainer/VBoxContainer/MediaContainer
 @onready var question_image = $MarginContainer/VBoxContainer/MediaContainer/Photo
 @onready var audio_container = $MarginContainer/VBoxContainer/MediaContainer/AudioContainer
 @onready var no_media_picture = $MarginContainer/VBoxContainer/MediaContainer/NoMediaPicture
+@onready var source_label = $MarginContainer/VBoxContainer/MediaContainer/Photo/SourceLabel
+
 
 # Audio Controls
 @onready var audio_streamer = $MarginContainer/VBoxContainer/MediaContainer/AudioContainer/PlayButton/Audio
@@ -124,12 +129,28 @@ func _process(_delta):
 # ============================================================================
 # QUESTION MANAGEMENT
 # ============================================================================
-
+##
+#func choose_questions() -> void:
+	#var all_questions = question_data.questions
+	##var test_question = all_questions[48]
+	##all_questions.remove_at(48)
+#
+	#all_questions.shuffle()
+	#selected_questions = all_questions.slice(0, QUESTIONS_PER_GAME)
+	##selected_questions.insert(0, test_question)
+	#
 func choose_questions() -> void:
 	var all_questions = question_data.questions
+
+	if only_media_questions:
+		# Filter only the questions that have media_path
+		all_questions = all_questions.filter(
+			func(q):
+				return not q.media_path.is_empty()
+		)
+	
 	all_questions.shuffle()
 	selected_questions = all_questions.slice(0, QUESTIONS_PER_GAME)
-
 func current_question_handling() -> void:
 	if current_question_index >= selected_questions.size():
 		show_score()
@@ -139,6 +160,7 @@ func current_question_handling() -> void:
 	
 	if _is_multiple_choice():
 		_setup_multiple_choice_question()
+		
 	else:
 		_setup_input_question()
 	
@@ -153,10 +175,14 @@ func _setup_multiple_choice_question() -> void:
 	multiple_choice_shuffle()
 	answer_input.hide()
 	confirm_label.hide()
+	center_container.show()
+
 
 func _setup_input_question() -> void:
 	answer_input.show()
 	confirm_label.show()
+	center_container.hide()
+	
 
 func multiple_choice_shuffle() -> void:
 	var correct_text = current_question.answers[current_question.correct_answer_index]
@@ -169,6 +195,12 @@ func show_new_question() -> void:
 	showing_answer = false
 	current_question_index += 1
 	
+	# Reset media visibility for new question
+	media_container.show()
+	no_media_picture.hide()
+	question_image.hide()
+	audio_container.hide()
+	
 	_reset_button_states()
 	question_label.add_theme_font_override("font", regular_font)
 	confirm_label.text = "Potvrdit odpověď!"
@@ -178,7 +210,7 @@ func show_new_question() -> void:
 
 func _reset_button_states() -> void:
 	for button in buttons:
-		button.add_theme_stylebox_override("disabled", load("res://disabled_neutral.tres"))
+		button.add_theme_stylebox_override("disabled", load("res://shaders/disabled_neutral.tres"))
 		button.disabled = false
 
 # ============================================================================
@@ -186,6 +218,11 @@ func _reset_button_states() -> void:
 # ============================================================================
 
 func _setup_media() -> void:
+	# For image questions, the images are in the answers, not as media
+	if _is_image_question():
+		media_container.hide()
+		return
+	
 	if current_question.media_path.is_empty():
 		_show_no_media_placeholder()
 		return
@@ -202,6 +239,8 @@ func _setup_media() -> void:
 		_:
 			push_warning("Unsupported media format: " + extension)
 			_show_no_media_placeholder()
+	source_label.text = "zdroj: "+current_question.media_source
+
 
 func _show_no_media_placeholder() -> void:
 	no_media_picture.show()
@@ -238,6 +277,11 @@ func _reset_audio_state() -> void:
 	paused_position = 0.0
 	slider.value = 0.0
 	_update_time_label()
+
+func _is_image_question() -> bool:
+	return current_question.question_text.begins_with("Který z uvedených symbolů")
+
+
 # ============================================================================
 # ANSWER HANDLING
 # ============================================================================
@@ -245,10 +289,36 @@ func _reset_audio_state() -> void:
 func assign_answers_to_buttons(answers: Array[String]) -> void:
 	for button in buttons:
 		button.hide()
-	
+		button.icon = null       # reset
+		button.text = ""         # reset
+	if _is_image_question():
+		_assign_image_answers(answers)
+	else:
+		_assign_text_answers(answers)
+
+func _assign_image_answers(answers: Array[String]) -> void:
 	for i in range(min(answers.size(), buttons.size())):
-		buttons[i].text = answers[i]
-		buttons[i].show()
+		var button = buttons[i]
+		button.custom_minimum_size = Vector2(170, 170)
+		var path := answers[i]
+		var tex := load(path)
+		if tex:
+			button.icon = tex
+			button.text = ""           # no text
+			button.expand_icon = true  # fill available space
+			button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		else:
+			push_error("Could not load image for answer: " + path)
+		button.show()
+	no_media_picture.hide()
+
+func _assign_text_answers(answers: Array[String]) -> void:
+	for i in range(min(answers.size(), buttons.size())):
+		var button = buttons[i]
+		button.custom_minimum_size = Vector2(220, 85)  # Smaller for text
+		button.text = answers[i]
+		button.show()
+	
 
 func show_answer(pressed_button: Button) -> void:
 	_disable_all_buttons()
@@ -275,11 +345,11 @@ func _display_answer_info() -> void:
 		show_new_question()
 
 func _handle_correct_answer(button: Button) -> void:
-	button.add_theme_stylebox_override("disabled", load("res://correct_answer.tres"))
+	button.add_theme_stylebox_override("disabled", load("res://shaders/correct_answer.tres"))
 	_increment_score()
 
 func _handle_wrong_answer(button: Button) -> void:
-	button.add_theme_stylebox_override("disabled", load("res://wrong_answer.tres"))
+	button.add_theme_stylebox_override("disabled", load("res://shaders/wrong_answer.tres"))
 	_highlight_correct_button()
 
 func _increment_score() -> void:
@@ -287,13 +357,13 @@ func _increment_score() -> void:
 	score_label.text = str(score)
 
 func _highlight_correct_button() -> void:
-	buttons[correct_answer_index].add_theme_stylebox_override("disabled", load("res://correct_answer.tres"))
+	buttons[correct_answer_index].add_theme_stylebox_override("disabled", load("res://shaders/correct_answer.tres"))
 
 func _show_answer_info() -> void:
 	answer_text.text = current_question.answer_info
-	answer_overlay.show()
 	await get_tree().create_timer(ANSWER_DELAY_SECONDS).timeout
-	answer_panel.show()
+	answer_overlay.show()
+	
 
 func unpress_all_buttons() -> void:
 	for button in buttons:
@@ -417,16 +487,18 @@ func _update_time_label() -> void:
 	if not audio_streamer.stream:
 		time_label.text = "00:00 / 00:00"
 		return
+	
 	var current_time = 0.0
+	
 	# Use slider's value if dragging, otherwise use audio's position
 	if slider_being_dragged:
 		current_time = slider.value
-	else:
+	elif audio_streamer.playing:
 		current_time = audio_streamer.get_playback_position()
-	# Handle reset case
-	if not audio_streamer.playing and paused_position == 0.0:
-		current_time = 0.0
-		
+	else:
+		# When paused, use the stored position
+		current_time = paused_position
+	
 	var total_time = audio_streamer.stream.get_length()
 	time_label.text = _format_time(current_time) + " / " + _format_time(total_time)
 
@@ -455,6 +527,17 @@ func _on_answer_confirm_pressed() -> void:
 	else:
 		await _handle_input_answer_confirmation()
 
+func _input(event: InputEvent) -> void:
+	# Check if Enter/Return key is pressed and we're in input mode (not multiple choice)
+	if event is InputEventKey and event.pressed and not event.echo:
+		if event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
+			# If answer is currently being shown, move to next question
+			if showing_answer:
+				_next_question()
+			# Only trigger input answer confirmation if input field is visible
+			elif not _is_multiple_choice() and answer_input.visible:
+				_on_answer_confirm_pressed()
+
 func _handle_multiple_choice_confirmation() -> void:
 	var pressed_button = answer_group.get_pressed_button()
 	if pressed_button:
@@ -481,13 +564,15 @@ func _update_confirm_label_for_result(result: InputAnswerMatch) -> void:
 		InputAnswerMatch.CORRECT, InputAnswerMatch.ADEQUATE:
 			_increment_score()
 			confirm_label.text = "Správně!"
+			confirm_label.add_theme_stylebox_override("disabled", load("res://shaders/wrong_answer.tres"))
+
 		InputAnswerMatch.WRONG:
 			confirm_label.text = "Špatně. Správná odpověď: " + current_question.correct_answer_text
+			confirm_label.add_theme_stylebox_override("disabled", load("res://shaders/correct_answer.tres"))
 
 func _next_question() -> void:
 	show_new_question()
 	answer_overlay.hide()
-	answer_panel.hide()
 
 # ============================================================================
 # GAME END

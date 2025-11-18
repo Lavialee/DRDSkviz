@@ -1,23 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsq1klj5qauab"]
+[gd_scene load_steps=6 format=3 uid="uid://dsq1klj5qauab"]
 
 [ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_7yq38"]
-[ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://drds_theme.tres" id="2_7pe0g"]
+[ext_resource type="StyleBox" uid="uid://bcod2w44seune" path="res://shaders/answer_explainer.tres" id="1_u2nhf"]
+[ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://shaders/drds_theme.tres" id="2_7pe0g"]
 [ext_resource type="FontFile" uid="uid://de4jr7rpa4npa" path="res://font/calibri-italic.ttf" id="2_mq4lj"]
 [ext_resource type="FontFile" uid="uid://dyuj63s622r2" path="res://font/calibri-bold.ttf" id="3_fin6f"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq4lj"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tydki"]
-bg_color = Color(0.1, 0.16, 0.5, 0.901961)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 25.0
-expand_margin_top = 25.0
-expand_margin_right = 25.0
-expand_margin_bottom = 25.0
 
 [node name="Answer" type="CenterContainer"]
 anchors_preset = 15
@@ -29,14 +16,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-visible = false
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_mq4lj")
+theme_override_styles/panel = ExtResource("1_u2nhf")
 
 [node name="ColorRect" type="Panel" parent="PanelContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tydki")
+theme_override_styles/panel = ExtResource("1_u2nhf")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2

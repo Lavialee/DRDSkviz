@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://drr3y75g2e42m"]
 
 [ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_d3djj"]
-[ext_resource type="StyleBox" uid="uid://di68xlxfgctf8" path="res://disabled_neutral.tres" id="2_2o3ph"]
+[ext_resource type="StyleBox" uid="uid://di68xlxfgctf8" path="res://shaders/disabled_neutral.tres" id="2_2o3ph"]
 [ext_resource type="FontFile" uid="uid://ctn37whlqaavh" path="res://font/Drds-Regular.ttf" id="3_n881e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ajtc"]
@@ -20,7 +20,6 @@ corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
-corner_detail = 5
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
@@ -57,7 +56,6 @@ corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
-corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o3ph"]
 content_margin_left = 15.0
@@ -74,7 +72,6 @@ corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
-corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n881e"]
 bg_color = Color(0.0980392, 0.156863, 0.501961, 1)

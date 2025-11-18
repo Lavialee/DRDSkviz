@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi3qg2srkofxi"
-path="res://.godot/imported/Otazka3_foto, zdroj ApF CRo.jpg-1f07a685811627d2a44ce5c54d01702e.ctex"
+path="res://.godot/imported/Otazka3_foto.jpg-0f15e28da097a5e59b989c4e90a5ef00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://media/questions/Otazka3_foto, zdroj ApF CRo.jpg"
-dest_files=["res://.godot/imported/Otazka3_foto, zdroj ApF CRo.jpg-1f07a685811627d2a44ce5c54d01702e.ctex"]
+source_file="res://media/questions/Otazka3_foto.jpg"
+dest_files=["res://.godot/imported/Otazka3_foto.jpg-0f15e28da097a5e59b989c4e90a5ef00.ctex"]
 
 [params]
 
