@@ -6,6 +6,12 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func _on_play_again_pressed() -> void:
+# For "Noob" difficulty button
+func _on_noob_pressed() -> void:
+	GameSettings.set_difficulty(GameSettings.Difficulty.NOOB)
+	get_tree().change_scene_to_file("res://scenes/DesktopLayout.tscn")
+
+# For "Pro" difficulty button
+func _on_pro_pressed() -> void:
 	GameSettings.set_difficulty(GameSettings.Difficulty.PRO)
 	get_tree().change_scene_to_file("res://scenes/DesktopLayout.tscn")

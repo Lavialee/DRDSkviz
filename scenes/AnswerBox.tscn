@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsq1klj5qauab"]
+[gd_scene load_steps=4 format=3 uid="uid://dsq1klj5qauab"]
 
-[ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_7yq38"]
 [ext_resource type="StyleBox" uid="uid://bcod2w44seune" path="res://shaders/answer_explainer.tres" id="1_u2nhf"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://shaders/drds_theme.tres" id="2_7pe0g"]
-[ext_resource type="FontFile" uid="uid://de4jr7rpa4npa" path="res://font/calibri-italic.ttf" id="2_mq4lj"]
-[ext_resource type="FontFile" uid="uid://dyuj63s622r2" path="res://font/calibri-bold.ttf" id="3_fin6f"]
+[ext_resource type="FontFile" uid="uid://dg58p7etnncy0" path="res://font/NoticiaText-Italic.ttf" id="3_u8tlb"]
 
 [node name="Answer" type="CenterContainer"]
 anchors_preset = 15
@@ -31,10 +29,9 @@ theme_override_constants/separation = 20
 [node name="TextEdit" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("1_7yq38")
-theme_override_fonts/bold_font = ExtResource("3_fin6f")
-theme_override_fonts/bold_italics_font = ExtResource("3_fin6f")
-theme_override_fonts/italics_font = ExtResource("2_mq4lj")
+theme = ExtResource("2_7pe0g")
+theme_override_colors/default_color = Color(2.693491, 3.749926, 9.947678, 1)
+theme_override_fonts/italics_font = ExtResource("3_u8tlb")
 theme_override_font_sizes/normal_font_size = 24
 theme_override_font_sizes/bold_font_size = 24
 theme_override_font_sizes/bold_italics_font_size = 24

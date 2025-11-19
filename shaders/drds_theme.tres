@@ -1,9 +1,10 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://drr3y75g2e42m"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://drr3y75g2e42m"]
 
-[ext_resource type="FontFile" uid="uid://2ufwhl4cac12" path="res://font/NoticiaText-Bold.ttf" id="1_c1ium"]
-[ext_resource type="FontFile" uid="uid://f6h4gtmvfffn" path="res://font/calibri-regular.ttf" id="1_d3djj"]
+[ext_resource type="FontFile" uid="uid://ob1h5saolrsq" path="res://font/NoticiaText-Bold.ttf" id="1_c1ium"]
 [ext_resource type="StyleBox" uid="uid://di68xlxfgctf8" path="res://shaders/disabled_neutral.tres" id="2_2o3ph"]
+[ext_resource type="FontFile" uid="uid://dg58p7etnncy0" path="res://font/NoticiaText-Italic.ttf" id="2_yudd2"]
 [ext_resource type="FontFile" uid="uid://ctn37whlqaavh" path="res://font/Drds-Regular.ttf" id="3_n881e"]
+[ext_resource type="FontFile" uid="uid://bj3lnahrpbbdr" path="res://font/NoticiaText-Regular.ttf" id="3_yudd2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ajtc"]
 content_margin_left = 15.0
@@ -103,20 +104,56 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 corner_detail = 5
 
-[sub_resource type="FontFile" id="FontFile_yudd2"]
-cache/0/24/0/ascent = 0.0
-cache/0/24/0/descent = 0.0
-cache/0/24/0/underline_position = 0.0
-cache/0/24/0/underline_thickness = 0.0
-cache/0/24/0/scale = 1.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdsa8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.09803922, 0.15686275, 0.5019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yudd2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.09803922, 0.15686275, 0.5019608, 0.5882353)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.09803922, 0.15686275, 0.5019608, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk5qb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [resource]
-default_font = SubResource("FontFile_yudd2")
 Button/colors/font_color = Color(0.0980392, 0.156863, 0.501961, 1)
 Button/colors/font_disabled_color = Color(0.0980392, 0.156863, 0.501961, 1)
 Button/colors/font_focus_color = Color(0.0980392, 0.156863, 0.501961, 1)
@@ -135,6 +172,7 @@ Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 24
 Button/fonts/font = ExtResource("1_c1ium")
+Button/fonts/italic_font = ExtResource("2_yudd2")
 Button/styles/disabled = ExtResource("2_2o3ph")
 Button/styles/focus = SubResource("StyleBoxFlat_0ajtc")
 Button/styles/hover = SubResource("StyleBoxFlat_wbijx")
@@ -152,11 +190,31 @@ Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 24
-Label/fonts/font = ExtResource("1_d3djj")
+Label/fonts/font = ExtResource("3_yudd2")
+LineEdit/colors/caret_color = Color(0.95, 0.95, 0.95, 1)
+LineEdit/colors/clear_button_color = Color(0.875, 0.875, 0.875, 1)
+LineEdit/colors/clear_button_color_pressed = Color(1, 1, 1, 1)
+LineEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+LineEdit/colors/font_outline_color = Color(0, 0, 0, 0.78431374)
+LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_uneditable_color = Color(0.875, 0.875, 0.875, 0.5)
+LineEdit/colors/selection_color = Color(0.5, 0.5, 0.5, 1)
+LineEdit/constants/caret_width = 1
+LineEdit/constants/minimum_character_width = 4
+LineEdit/constants/outline_size = 0
+LineEdit/font_sizes/font_size = 20
+LineEdit/fonts/font = ExtResource("3_yudd2")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_pdsa8")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_yudd2")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_dk5qb")
 RichTextLabel/colors/default_color = Color(0.0980392, 0.156863, 0.501961, 1)
 RichTextLabel/constants/line_separation = 2
-RichTextLabel/font_sizes/normal_font_size = 24
-RichTextLabel/fonts/normal_font = ExtResource("1_d3djj")
+RichTextLabel/font_sizes/bold_italics_font_size = 22
+RichTextLabel/font_sizes/italics_font_size = 22
+RichTextLabel/font_sizes/normal_font_size = 22
+RichTextLabel/fonts/italics_font = ExtResource("2_yudd2")
+RichTextLabel/fonts/normal_font = ExtResource("3_yudd2")
 ScoreLabel/base_type = &"Label"
 ScoreLabel/fonts/font = ExtResource("3_n881e")
 VBoxContainer/constants/separation = 35
