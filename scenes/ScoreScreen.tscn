@@ -1,8 +1,6 @@
-[gd_scene load_steps=38 format=4 uid="uid://de78lgv7movag"]
+[gd_scene load_steps=36 format=4 uid="uid://de78lgv7movag"]
 
 [ext_resource type="Script" uid="uid://bblbut8dqiduy" path="res://scripts/score_screen.gd" id="1_ny37a"]
-[ext_resource type="Material" uid="uid://bjuqi144bw5sj" path="res://shaders/squiggle_shader.tres" id="2_ttukg"]
-[ext_resource type="Texture2D" uid="uid://dy5tw6jjgw2b4" path="res://media/background_squiggles.png" id="3_4ohuh"]
 [ext_resource type="Texture2D" uid="uid://ofdwr1yrsia1" path="res://media/diskviz.png" id="4_wh7km"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://shaders/drds_theme.tres" id="5_ny37a"]
 [ext_resource type="FontFile" uid="uid://ob1h5saolrsq" path="res://font/NoticiaText-Bold.ttf" id="6_ny37a"]
@@ -897,47 +895,47 @@ cache/2/48/0/underline_thickness = 2.390625
 cache/2/48/0/scale = 1.0
 cache/2/48/0/textures/0/offsets = PackedInt32Array(414, 0, 98, 77, 129, 77, 383, 80)
 cache/2/48/0/textures/0/image = SubResource("Image_e3ivd")
-cache/2/48/0/glyphs/20/advance = Vector2(29.206247, 48.265625)
+cache/2/48/0/glyphs/20/advance = Vector2(31.006247, 48.265625)
 cache/2/48/0/glyphs/20/offset = Vector2(-13.899999, -58.166668)
 cache/2/48/0/glyphs/20/size = Vector2(54, 75)
 cache/2/48/0/glyphs/20/uv_rect = Rect2(1, 1, 54, 75)
 cache/2/48/0/glyphs/20/texture_idx = 0
-cache/2/48/0/glyphs/21/advance = Vector2(29.206247, 48.265625)
+cache/2/48/0/glyphs/21/advance = Vector2(31.006247, 48.265625)
 cache/2/48/0/glyphs/21/offset = Vector2(-15.283333, -58.7)
 cache/2/48/0/glyphs/21/size = Vector2(63, 75)
 cache/2/48/0/glyphs/21/uv_rect = Rect2(57, 1, 63, 75)
 cache/2/48/0/glyphs/21/texture_idx = 0
-cache/2/48/0/glyphs/351/advance = Vector2(33.534378, 48.265625)
+cache/2/48/0/glyphs/351/advance = Vector2(35.33438, 48.265625)
 cache/2/48/0/glyphs/351/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/351/size = Vector2(73, 75)
 cache/2/48/0/glyphs/351/uv_rect = Rect2(122, 1, 73, 75)
 cache/2/48/0/glyphs/351/texture_idx = 0
-cache/2/48/0/glyphs/382/advance = Vector2(31.987497, 48.265625)
+cache/2/48/0/glyphs/382/advance = Vector2(33.7875, 48.265625)
 cache/2/48/0/glyphs/382/offset = Vector2(-14.45, -49.633335)
 cache/2/48/0/glyphs/382/size = Vector2(66, 66)
 cache/2/48/0/glyphs/382/uv_rect = Rect2(197, 1, 66, 66)
 cache/2/48/0/glyphs/382/texture_idx = 0
-cache/2/48/0/glyphs/426/advance = Vector2(33.534378, 48.265625)
+cache/2/48/0/glyphs/426/advance = Vector2(35.33438, 48.265625)
 cache/2/48/0/glyphs/426/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/426/size = Vector2(73, 75)
 cache/2/48/0/glyphs/426/uv_rect = Rect2(265, 1, 73, 75)
 cache/2/48/0/glyphs/426/texture_idx = 0
-cache/2/48/0/glyphs/459/advance = Vector2(31.034372, 48.265625)
+cache/2/48/0/glyphs/459/advance = Vector2(32.834373, 48.265625)
 cache/2/48/0/glyphs/459/offset = Vector2(-14.399999, -61.599995)
 cache/2/48/0/glyphs/459/size = Vector2(63, 78)
 cache/2/48/0/glyphs/459/uv_rect = Rect2(1, 78, 63, 78)
 cache/2/48/0/glyphs/459/texture_idx = 0
-cache/2/48/0/glyphs/36/advance = Vector2(33.534378, 48.265625)
+cache/2/48/0/glyphs/36/advance = Vector2(35.33438, 48.265625)
 cache/2/48/0/glyphs/36/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/36/size = Vector2(73, 75)
 cache/2/48/0/glyphs/36/uv_rect = Rect2(340, 1, 73, 75)
 cache/2/48/0/glyphs/36/texture_idx = 0
-cache/2/48/0/glyphs/69/advance = Vector2(31.706247, 48.265625)
+cache/2/48/0/glyphs/69/advance = Vector2(33.50625, 48.265625)
 cache/2/48/0/glyphs/69/offset = Vector2(-12.8, -60.3)
 cache/2/48/0/glyphs/69/size = Vector2(62, 77)
 cache/2/48/0/glyphs/69/uv_rect = Rect2(66, 78, 62, 77)
 cache/2/48/0/glyphs/69/texture_idx = 0
-cache/2/48/0/glyphs/3/advance = Vector2(14.268748, 48.265625)
+cache/2/48/0/glyphs/3/advance = Vector2(16.068748, 48.265625)
 cache/2/48/0/glyphs/3/offset = Vector2(0, 0)
 cache/2/48/0/glyphs/3/size = Vector2(0, 0)
 cache/2/48/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
@@ -1745,53 +1743,53 @@ cache/2/48/0/underline_thickness = 2.390625
 cache/2/48/0/scale = 1.0
 cache/2/48/0/textures/0/offsets = PackedInt32Array(414, 0, 98, 77, 129, 77, 383, 80)
 cache/2/48/0/textures/0/image = SubResource("Image_ur356")
-cache/2/48/0/glyphs/20/advance = Vector2(28.30625, 48.265625)
+cache/2/48/0/glyphs/20/advance = Vector2(30.106247, 48.265625)
 cache/2/48/0/glyphs/20/offset = Vector2(-13.899999, -58.166668)
 cache/2/48/0/glyphs/20/size = Vector2(54, 75)
 cache/2/48/0/glyphs/20/uv_rect = Rect2(1, 1, 54, 75)
 cache/2/48/0/glyphs/20/texture_idx = 0
-cache/2/48/0/glyphs/21/advance = Vector2(28.30625, 48.265625)
+cache/2/48/0/glyphs/21/advance = Vector2(30.106247, 48.265625)
 cache/2/48/0/glyphs/21/offset = Vector2(-15.283333, -58.7)
 cache/2/48/0/glyphs/21/size = Vector2(63, 75)
 cache/2/48/0/glyphs/21/uv_rect = Rect2(57, 1, 63, 75)
 cache/2/48/0/glyphs/21/texture_idx = 0
-cache/2/48/0/glyphs/351/advance = Vector2(32.634377, 48.265625)
+cache/2/48/0/glyphs/351/advance = Vector2(34.43438, 48.265625)
 cache/2/48/0/glyphs/351/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/351/size = Vector2(73, 75)
 cache/2/48/0/glyphs/351/uv_rect = Rect2(122, 1, 73, 75)
 cache/2/48/0/glyphs/351/texture_idx = 0
-cache/2/48/0/glyphs/382/advance = Vector2(31.0875, 48.265625)
+cache/2/48/0/glyphs/382/advance = Vector2(32.887497, 48.265625)
 cache/2/48/0/glyphs/382/offset = Vector2(-14.45, -49.633335)
 cache/2/48/0/glyphs/382/size = Vector2(66, 66)
 cache/2/48/0/glyphs/382/uv_rect = Rect2(197, 1, 66, 66)
 cache/2/48/0/glyphs/382/texture_idx = 0
-cache/2/48/0/glyphs/426/advance = Vector2(32.634377, 48.265625)
+cache/2/48/0/glyphs/426/advance = Vector2(34.43438, 48.265625)
 cache/2/48/0/glyphs/426/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/426/size = Vector2(73, 75)
 cache/2/48/0/glyphs/426/uv_rect = Rect2(265, 1, 73, 75)
 cache/2/48/0/glyphs/426/texture_idx = 0
-cache/2/48/0/glyphs/459/advance = Vector2(30.134375, 48.265625)
+cache/2/48/0/glyphs/459/advance = Vector2(31.934372, 48.265625)
 cache/2/48/0/glyphs/459/offset = Vector2(-14.399999, -61.599995)
 cache/2/48/0/glyphs/459/size = Vector2(63, 78)
 cache/2/48/0/glyphs/459/uv_rect = Rect2(1, 78, 63, 78)
 cache/2/48/0/glyphs/459/texture_idx = 0
-cache/2/48/0/glyphs/36/advance = Vector2(32.634377, 48.265625)
+cache/2/48/0/glyphs/36/advance = Vector2(34.43438, 48.265625)
 cache/2/48/0/glyphs/36/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/36/size = Vector2(73, 75)
 cache/2/48/0/glyphs/36/uv_rect = Rect2(340, 1, 73, 75)
 cache/2/48/0/glyphs/36/texture_idx = 0
-cache/2/48/0/glyphs/69/advance = Vector2(30.80625, 48.265625)
+cache/2/48/0/glyphs/69/advance = Vector2(32.606247, 48.265625)
 cache/2/48/0/glyphs/69/offset = Vector2(-12.8, -60.3)
 cache/2/48/0/glyphs/69/size = Vector2(62, 77)
 cache/2/48/0/glyphs/69/uv_rect = Rect2(66, 78, 62, 77)
 cache/2/48/0/glyphs/69/texture_idx = 0
-cache/2/48/0/glyphs/3/advance = Vector2(13.368749, 48.265625)
+cache/2/48/0/glyphs/3/advance = Vector2(15.168748, 48.265625)
 cache/2/48/0/glyphs/3/offset = Vector2(0, 0)
 cache/2/48/0/glyphs/3/size = Vector2(0, 0)
 cache/2/48/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
 cache/2/48/0/glyphs/3/texture_idx = -1
 
-[sub_resource type="Image" id="Image_3opiv"]
+[sub_resource type="Image" id="Image_4ohuh"]
 data = {
 "data": PackedByteArray("/////////////////////w=="),
 "format": "RGBA8",
@@ -1801,7 +1799,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_clf55"]
-image = SubResource("Image_3opiv")
+image = SubResource("Image_4ohuh")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdsa8"]
 content_margin_left = 4.0
@@ -1915,26 +1913,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ny37a")
 
-[node name="Sprite2D" type="TextureRect" parent="."]
-self_modulate = Color(1, 1, 1, 0.301961)
-texture_repeat = 2
-material = ExtResource("2_ttukg")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_4ohuh")
-expand_mode = 2
-
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15
 anchor_top = 0.13
 anchor_right = 0.85
-anchor_bottom = 1.0
+anchor_bottom = 0.95
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 100
@@ -1979,5 +1964,12 @@ keep_pressed_outside = true
 button_group = SubResource("ButtonGroup_mf1y3")
 text = "Přes dismaňák jsem expert!"
 autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("5_ny37a")
+text = "illustrace překresleny podle Ma"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/AspectRatioContainer/VBoxContainer/VBoxContainer/PlayAgain" to="." method="_on_play_again_pressed"]

@@ -1,10 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://cev8gcw2lj5ms"]
+[gd_scene load_steps=9 format=3 uid="uid://cev8gcw2lj5ms"]
 
 [ext_resource type="Script" uid="uid://4dkxelhisf1t" path="res://scripts/main_menu.gd" id="1_aivek"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://shaders/drds_theme.tres" id="1_cax7d"]
 [ext_resource type="Texture2D" uid="uid://ofdwr1yrsia1" path="res://media/diskviz.png" id="2_iysm8"]
 [ext_resource type="Material" uid="uid://bjuqi144bw5sj" path="res://shaders/squiggle_shader.tres" id="2_l72w3"]
 [ext_resource type="Texture2D" uid="uid://dy5tw6jjgw2b4" path="res://media/background_squiggles.png" id="3_826wr"]
+
+[sub_resource type="Gradient" id="Gradient_l72w3"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.042402804, 0.36363637, 0.7)
+colors = PackedColorArray(0.09803922, 0.15686275, 0.5019608, 1, 0.804546, 0.8172929, 0.8920754, 1, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 55
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_826wr"]
+gradient = SubResource("Gradient_l72w3")
+fill_from = Vector2(1, 1)
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ucygd"]
 
@@ -17,7 +28,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aivek")
 
-[node name="Sprite2D" type="TextureRect" parent="."]
+[node name="Gradient" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_826wr")
+
+[node name="Background" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.301961)
 texture_repeat = 2
 material = ExtResource("2_l72w3")

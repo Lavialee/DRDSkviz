@@ -17,17 +17,12 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_u2nhf")
 
-[node name="ColorRect" type="Panel" parent="PanelContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = ExtResource("1_u2nhf")
-
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="TextEdit" type="RichTextLabel" parent="PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 0)
+custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 theme = ExtResource("2_7pe0g")
 theme_override_colors/default_color = Color(2.693491, 3.749926, 9.947678, 1)

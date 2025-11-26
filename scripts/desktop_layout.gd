@@ -43,10 +43,12 @@ enum InputAnswerMatch {
 @onready var time_label: Label = $MarginContainer/VBoxContainer/MediaContainer/AudioContainer/AudioTrackTime
 
 # Answer Panel
-@onready var answer_panel = $Answer/PanelContainer
-@onready var next_question_button = $Answer/PanelContainer/VBoxContainer/NextQuestion
-@onready var answer_text = $Answer/PanelContainer/VBoxContainer/TextEdit
-@onready var answer_overlay = $Answer
+@onready var answer_panel = $InputAnswers/VBoxContainer/Answer/PanelContainer
+@onready var next_question_button = $InputAnswers/VBoxContainer/Answer/PanelContainer/VBoxContainer/NextQuestion
+@onready var answer_text = $InputAnswers/VBoxContainer/Answer/PanelContainer/VBoxContainer/TextEdit
+@onready var answer_overlay = $InputAnswers
+@onready var answer_correctness_color = $InputAnswers/VBoxContainer/AnswerCorrectness/ColorPanel
+@onready var answer_correctness_text = $InputAnswers/VBoxContainer/AnswerCorrectness/ColorPanel/TextEdit
 
 # ============================================================================
 # GAME DATA & STATE
@@ -61,6 +63,7 @@ var selected_questions: Array = []
 var current_question_index: int = 0
 var current_question
 var correct_answer_index: int = -1 # Use -1 to represent no answer
+var last_answer_result: InputAnswerMatch = InputAnswerMatch.WRONG
 
 # UI State
 var answer_group: ButtonGroup
@@ -80,13 +83,18 @@ var score: int = 0
 # ============================================================================
 
 func _ready() -> void:
+	# Add all persistent nodes to the back
+	for node in GameSettings.persistent_nodes:
+		if node:
+			add_child(node)
+			move_child(node, 0)  # Move each to the back
+	
 	_setup_button_group()
 	_setup_buttons()
 	_setup_audio_slider()
 	_start_game()
 	
-	audio_streamer.finished.connect(_on_audio_finished) # Connect the signal for when audio finishes playing
-	# Set initial state
+	audio_streamer.finished.connect(_on_audio_finished)
 	_update_time_label()
 
 func _setup_button_group() -> void:
@@ -129,16 +137,6 @@ func _process(_delta):
 # ============================================================================
 # QUESTION MANAGEMENT
 # ============================================================================
-##
-#func choose_questions() -> void:
-	#var all_questions = question_data.questions
-	##var test_question = all_questions[48]
-	##all_questions.remove_at(48)
-#
-	#all_questions.shuffle()
-	#selected_questions = all_questions.slice(0, QUESTIONS_PER_GAME)
-	##selected_questions.insert(0, test_question)
-	#
 func choose_questions() -> void:
 	var all_questions = question_data.questions
 	# Filter by difficulty
@@ -207,10 +205,6 @@ func multiple_choice_shuffle() -> void:
 	for text in correct_texts:
 		new_correct_indices.append(current_question.answers.find(text))
 
-	# OLD - This causes the error:
-	# current_question.correct_answer_indices = new_correct_indices
-	
-	# NEW - Modify the array in place:
 	current_question.correct_answer_indices.clear()
 	for idx in new_correct_indices:
 		current_question.correct_answer_indices.append(idx)
@@ -351,23 +345,27 @@ func show_answer(pressed_button: Button) -> void:
 	_disable_all_buttons()
 	
 	var button_index = buttons.find(pressed_button)
+	
 	if button_index in current_question.correct_answer_indices:
+		last_answer_result = InputAnswerMatch.CORRECT
 		_handle_correct_answer(pressed_button)
 	else:
+		last_answer_result = InputAnswerMatch.WRONG
 		_handle_wrong_answer(pressed_button)
 	
 	showing_answer = true
 	_reset_audio_state()
-	
-	await _display_answer_info()
+	# Pass the button text as user_answer
+	var button_answer = pressed_button.text if not pressed_button.text.is_empty() else "Tento obrázek"
+	await _display_answer_info(last_answer_result, button_answer)
 
 func _disable_all_buttons() -> void:
 	for button in buttons:
 		button.disabled = true
 
-func _display_answer_info() -> void:
+func _display_answer_info(result: InputAnswerMatch, user_answer: String = "") -> void:
 	if current_question.answer_info:
-		await _show_answer_info()
+		await _update_answer_display(result, user_answer)
 	else:
 		await get_tree().create_timer(ANSWER_DELAY_SECONDS).timeout
 		show_new_question()
@@ -387,12 +385,6 @@ func _increment_score() -> void:
 func _highlight_correct_button() -> void:
 	buttons[correct_answer_index].add_theme_stylebox_override("disabled", load("res://shaders/correct_answer.tres"))
 
-func _show_answer_info() -> void:
-	answer_text.text = current_question.answer_info
-	await get_tree().create_timer(ANSWER_DELAY_SECONDS).timeout
-	answer_overlay.show()
-	
-
 func unpress_all_buttons() -> void:
 	for button in buttons:
 		button.set_pressed(false)
@@ -406,6 +398,16 @@ func check_input_answer(expected_answer: String, actual_answer: String) -> Input
 	actual_answer = ts.strip_diacritics(actual_answer).to_lower()
 	expected_answer = ts.strip_diacritics(expected_answer).to_lower()
 	
+	# For answers with less than 3 characters, require exact match
+	if expected_answer.length() < 3:
+		if expected_answer == actual_answer:
+			print("The input answer is fully correct")
+			return InputAnswerMatch.CORRECT
+		else:
+			print("The input answer is wrong (short answer requires exact match)")
+			return InputAnswerMatch.WRONG
+	
+	# For longer answers, use the fuzzy matching logic
 	var distance = edit_distance(expected_answer, actual_answer)
 	var max_distance = max(2, int(expected_answer.length() / 3.0))
 	
@@ -449,22 +451,18 @@ func edit_distance(s1: String, s2: String) -> int:
 # AUDIO CONTROLS
 # ============================================================================
 
-# Merges your original (working) pause logic
 func _on_play_button_pressed() -> void:
 	if audio_streamer.playing:
-		# Is playing -> PAUSE
 		paused_position = audio_streamer.get_playback_position()
 		audio_streamer.stop()
 		print("Pausing audio at position: ", paused_position)
 	else:
-		# Is paused/stopped -> PLAY from saved spot
 		print("Starting/Resuming audio from position: ", paused_position)
 		audio_streamer.play(paused_position)
 
 
 func _on_slider_drag_started() -> void:
 	slider_being_dragged = true
-	# Remember if it was playing, so we can resume after dragging
 	was_playing_before_drag = audio_streamer.playing
 	if was_playing_before_drag:
 		audio_streamer.stop() # Pause audio during drag
@@ -489,27 +487,23 @@ func _on_slider_gui_input(event: InputEvent) -> void:
 		if slider_being_dragged:
 			return # The drag functions will handle this
 		var was_playing: bool = audio_streamer.playing
-		# Calculate click position and seek
 		var ratio = clamp(event.position.x / slider.size.x, 0.0, 1.0)
 		var new_value = ratio * slider.max_value
 		
-		slider.value = new_value # Move slider
+		slider.value = new_value
 		paused_position = new_value
 		# Apply the cleaner logic         
 		if was_playing:             
-			audio_streamer.play(new_value) # play() also seeks         
+			audio_streamer.play(new_value)       
 		else:             
-			audio_streamer.seek(new_value) # Just seek if it was paused                 
-		_update_time_label() # Update label to new time
+			audio_streamer.seek(new_value) 
+		_update_time_label()
 
-
-# This resets the player when the audio ends
 func _on_audio_finished():
 	print("Audio finished.")
 	paused_position = 0.0
 	slider.value = 0.0
 	_update_time_label()
-
 
 func _update_time_label() -> void:
 	if not audio_streamer.stream:
@@ -518,20 +512,18 @@ func _update_time_label() -> void:
 	
 	var current_time = 0.0
 	
-	# Use slider's value if dragging, otherwise use audio's position
 	if slider_being_dragged:
 		current_time = slider.value
 	elif audio_streamer.playing:
 		current_time = audio_streamer.get_playback_position()
 	else:
-		# When paused, use the stored position
 		current_time = paused_position
 	
 	var total_time = audio_streamer.stream.get_length()
 	time_label.text = _format_time(current_time) + " / " + _format_time(total_time)
 
 func _format_time(seconds: float) -> String:
-	var total_seconds: int = int(seconds) # or floori(seconds)
+	var total_seconds: int = int(seconds) 
 	var minutes: int = total_seconds / 60
 	var secs: int = total_seconds % 60
 	return str(minutes).pad_zeros(2) + ":" + str(secs).pad_zeros(2)
@@ -556,13 +548,10 @@ func _on_answer_confirm_pressed() -> void:
 		await _handle_input_answer_confirmation()
 
 func _input(event: InputEvent) -> void:
-	# Check if Enter/Return key is pressed and we're in input mode (not multiple choice)
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER:
-			# If answer is currently being shown, move to next question
 			if showing_answer:
 				_next_question()
-			# Only trigger input answer confirmation if input field is visible
 			elif not _is_multiple_choice() and answer_input.visible:
 				_on_answer_confirm_pressed()
 
@@ -577,34 +566,67 @@ func _handle_input_answer_confirmation() -> void:
 	var actual_answer = answer_input.text.strip_edges()
 	if actual_answer.is_empty():
 		push_warning("No answer entered!")
+		confirm_label.text = "Musíš napsat odpověď"
+		confirm_label.add_theme_stylebox_override("normal", load("res://shaders/wrong_answer.tres"))
+		confirm_label.add_theme_stylebox_override("hover", load("res://shaders/wrong_answer.tres"))
+		await get_tree().create_timer(2).timeout
+		confirm_label.text = "Potvrdit odpověď"
+		confirm_label.remove_theme_stylebox_override("normal")  # Remove the override instead
+		confirm_label.remove_theme_stylebox_override("hover")
 		return
 	
 	var best_result = InputAnswerMatch.WRONG
 	for idx in current_question.correct_answer_indices:
 		var correct_text = current_question.answers[idx]
 		var result = check_input_answer(correct_text, actual_answer)
+		
 		if result == InputAnswerMatch.CORRECT:
 			best_result = InputAnswerMatch.CORRECT
 			break
 		elif result == InputAnswerMatch.ADEQUATE and best_result == InputAnswerMatch.WRONG:
 			best_result = InputAnswerMatch.ADEQUATE
-	_update_confirm_label_for_result(best_result)
+	
+	if best_result == InputAnswerMatch.CORRECT or best_result == InputAnswerMatch.ADEQUATE:
+		_increment_score()
 	
 	showing_answer = true
 	answer_input.clear()
 	
-	await _display_answer_info()
+	await _display_answer_info(best_result, actual_answer) 
 
-func _update_confirm_label_for_result(result: InputAnswerMatch) -> void:
+func _update_answer_display(result: InputAnswerMatch, user_answer: String = "") -> void:
+	var correct_text = current_question.answers[current_question.correct_answer_indices[0]]
+	var blue_color = Color("192880")
+	
+	# Check if this is an image question
+	var is_image_q = _is_image_question()
+	
 	match result:
-		InputAnswerMatch.CORRECT, InputAnswerMatch.ADEQUATE:
-			_increment_score()
-			confirm_label.text = "Správně!"
-			confirm_label.add_theme_stylebox_override("disabled", load("res://shaders/wrong_answer.tres"))
-
+		InputAnswerMatch.CORRECT:
+			answer_correctness_color.add_theme_stylebox_override("panel", load("res://shaders/answer_explainer_correct.tres"))
+			if is_image_q:
+				answer_correctness_text.text = "Vybral jsi správný obrázek!"
+			else:
+				answer_correctness_text.text = "%s je správně!" % correct_text
+			answer_correctness_text.add_theme_color_override("default_color", Color.WHITE)
+			
+		InputAnswerMatch.ADEQUATE:
+			answer_correctness_color.add_theme_stylebox_override("panel", load("res://shaders/answer_explainer_adequate.tres"))
+			answer_correctness_text.text = "Skoro! Úplně správně je %s. Vypadá to na překlep, tak bod dostaneš" % correct_text
+			answer_correctness_text.add_theme_color_override("default_color", blue_color)
+			
 		InputAnswerMatch.WRONG:
-			var correct_text = current_question.answers[current_question.correct_answer_indices[0]]
-			confirm_label.text = "Špatně. Správná odpověď: " + correct_text
+			answer_correctness_color.add_theme_stylebox_override("panel", load("res://shaders/answer_explainer_wrong.tres"))
+			if is_image_q:
+				answer_correctness_text.text = "Vybral jsi špatný obrázek, příště to vyjde!"
+			else:
+				answer_correctness_text.text = "Tvoje odpověď byla %s. Správná odpověď je %s" % [user_answer, correct_text]
+			answer_correctness_text.add_theme_color_override("default_color", Color.WHITE)
+	
+	# Set explanation text and show overlay
+	answer_text.text = current_question.answer_info
+	await get_tree().create_timer(ANSWER_DELAY_SECONDS).timeout
+	answer_overlay.show()
 
 func _next_question() -> void:
 	show_new_question()
@@ -615,19 +637,8 @@ func _next_question() -> void:
 # ============================================================================
 
 func show_score() -> void:
-	media_container.hide()
-	answer_input.hide()
-	
-	for button in buttons:
-		button.hide()
-	
-	question_label.text = "Konec hry! Tvoje skóre: %d/%d" % [score, QUESTIONS_PER_GAME]
-	
-	confirm_label.show()
-	confirm_label.text = "Hrát znovu"
-	
-	if not confirm_label.pressed.is_connected(reset_game):
-		confirm_label.pressed.connect(reset_game)
+	GameSettings.set_score(score, QUESTIONS_PER_GAME)
+	get_tree().change_scene_to_file("res://scenes/ScoreScreen.tscn")
 
 func reset_game() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

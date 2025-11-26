@@ -2,20 +2,29 @@
 
 [ext_resource type="Script" uid="uid://c3ddooq74hlxv" path="res://scripts/desktop_layout.gd" id="1_ha3lu"]
 [ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://shaders/drds_theme.tres" id="1_ij2e0"]
-[ext_resource type="Material" uid="uid://bjuqi144bw5sj" path="res://shaders/squiggle_shader.tres" id="2_nokfu"]
-[ext_resource type="Texture2D" uid="uid://dy5tw6jjgw2b4" path="res://media/background_squiggles.png" id="3_8iuv3"]
+[ext_resource type="Material" uid="uid://bjuqi144bw5sj" path="res://shaders/squiggle_shader.tres" id="2_ml6k1"]
 [ext_resource type="Texture2D" uid="uid://bamxl2gpxgxqk" path="res://media/questions/Otazka4_foto.jpeg" id="3_mnqw2"]
+[ext_resource type="Texture2D" uid="uid://dy5tw6jjgw2b4" path="res://media/background_squiggles.png" id="3_obaby"]
 [ext_resource type="FontFile" uid="uid://ctn37whlqaavh" path="res://font/Drds-Regular.ttf" id="3_x1n5j"]
 [ext_resource type="Texture2D" uid="uid://m0artjibfp3j" path="res://media/play_icon.png" id="4_0qunc"]
 [ext_resource type="FontFile" uid="uid://ob1h5saolrsq" path="res://font/NoticiaText-Bold.ttf" id="4_5i7ie"]
 [ext_resource type="Texture2D" uid="uid://nanpcbrk8jf1" path="res://media/pause_icon.png" id="5_dyeug"]
 [ext_resource type="StyleBox" uid="uid://di68xlxfgctf8" path="res://shaders/disabled_neutral.tres" id="5_o2bgs"]
 [ext_resource type="FontFile" uid="uid://bj3lnahrpbbdr" path="res://font/NoticiaText-Regular.ttf" id="6_ajexa"]
-[ext_resource type="Texture2D" uid="uid://creeujstwusmy" path="res://media/audio_playing_animation.tres" id="6_dyeug"]
 [ext_resource type="Texture2D" uid="uid://wpcc4tg2ub5k" path="res://media/pause_icon_2.png" id="8_1keyp"]
 [ext_resource type="PackedScene" uid="uid://dsq1klj5qauab" path="res://scenes/AnswerBox.tscn" id="9_aciuj"]
-[ext_resource type="Texture2D" uid="uid://bq5q8jsfmgvr8" path="res://vizual/audio.png" id="9_ea7go"]
-[ext_resource type="Texture2D" uid="uid://chjnbk6xi633q" path="res://vizual/vyber ze 4.png" id="9_hio1y"]
+[ext_resource type="PackedScene" uid="uid://cdfg1hf02gc4o" path="res://scenes/AnswerCorrectness.tscn" id="15_5i7ie"]
+
+[sub_resource type="Gradient" id="Gradient_l72w3"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.042402804, 0.36363637, 0.7)
+colors = PackedColorArray(0.09803922, 0.15686275, 0.5019608, 1, 0.804546, 0.8172929, 0.8920754, 1, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 55
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5i7ie"]
+gradient = SubResource("Gradient_l72w3")
+fill_from = Vector2(1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obaby"]
 content_margin_left = 15.0
@@ -904,47 +913,47 @@ cache/2/48/0/underline_thickness = 2.390625
 cache/2/48/0/scale = 1.0
 cache/2/48/0/textures/0/offsets = PackedInt32Array(414, 0, 98, 77, 129, 77, 383, 80)
 cache/2/48/0/textures/0/image = SubResource("Image_ur356")
-cache/2/48/0/glyphs/20/advance = Vector2(28.30625, 48.265625)
+cache/2/48/0/glyphs/20/advance = Vector2(30.106247, 48.265625)
 cache/2/48/0/glyphs/20/offset = Vector2(-13.899999, -58.166668)
 cache/2/48/0/glyphs/20/size = Vector2(54, 75)
 cache/2/48/0/glyphs/20/uv_rect = Rect2(1, 1, 54, 75)
 cache/2/48/0/glyphs/20/texture_idx = 0
-cache/2/48/0/glyphs/21/advance = Vector2(28.30625, 48.265625)
+cache/2/48/0/glyphs/21/advance = Vector2(30.106247, 48.265625)
 cache/2/48/0/glyphs/21/offset = Vector2(-15.283333, -58.7)
 cache/2/48/0/glyphs/21/size = Vector2(63, 75)
 cache/2/48/0/glyphs/21/uv_rect = Rect2(57, 1, 63, 75)
 cache/2/48/0/glyphs/21/texture_idx = 0
-cache/2/48/0/glyphs/351/advance = Vector2(32.634377, 48.265625)
+cache/2/48/0/glyphs/351/advance = Vector2(34.43438, 48.265625)
 cache/2/48/0/glyphs/351/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/351/size = Vector2(73, 75)
 cache/2/48/0/glyphs/351/uv_rect = Rect2(122, 1, 73, 75)
 cache/2/48/0/glyphs/351/texture_idx = 0
-cache/2/48/0/glyphs/382/advance = Vector2(31.0875, 48.265625)
+cache/2/48/0/glyphs/382/advance = Vector2(32.887497, 48.265625)
 cache/2/48/0/glyphs/382/offset = Vector2(-14.45, -49.633335)
 cache/2/48/0/glyphs/382/size = Vector2(66, 66)
 cache/2/48/0/glyphs/382/uv_rect = Rect2(197, 1, 66, 66)
 cache/2/48/0/glyphs/382/texture_idx = 0
-cache/2/48/0/glyphs/426/advance = Vector2(32.634377, 48.265625)
+cache/2/48/0/glyphs/426/advance = Vector2(34.43438, 48.265625)
 cache/2/48/0/glyphs/426/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/426/size = Vector2(73, 75)
 cache/2/48/0/glyphs/426/uv_rect = Rect2(265, 1, 73, 75)
 cache/2/48/0/glyphs/426/texture_idx = 0
-cache/2/48/0/glyphs/459/advance = Vector2(30.134375, 48.265625)
+cache/2/48/0/glyphs/459/advance = Vector2(31.934372, 48.265625)
 cache/2/48/0/glyphs/459/offset = Vector2(-14.399999, -61.599995)
 cache/2/48/0/glyphs/459/size = Vector2(63, 78)
 cache/2/48/0/glyphs/459/uv_rect = Rect2(1, 78, 63, 78)
 cache/2/48/0/glyphs/459/texture_idx = 0
-cache/2/48/0/glyphs/36/advance = Vector2(32.634377, 48.265625)
+cache/2/48/0/glyphs/36/advance = Vector2(34.43438, 48.265625)
 cache/2/48/0/glyphs/36/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/36/size = Vector2(73, 75)
 cache/2/48/0/glyphs/36/uv_rect = Rect2(340, 1, 73, 75)
 cache/2/48/0/glyphs/36/texture_idx = 0
-cache/2/48/0/glyphs/69/advance = Vector2(30.80625, 48.265625)
+cache/2/48/0/glyphs/69/advance = Vector2(32.606247, 48.265625)
 cache/2/48/0/glyphs/69/offset = Vector2(-12.8, -60.3)
 cache/2/48/0/glyphs/69/size = Vector2(62, 77)
 cache/2/48/0/glyphs/69/uv_rect = Rect2(66, 78, 62, 77)
 cache/2/48/0/glyphs/69/texture_idx = 0
-cache/2/48/0/glyphs/3/advance = Vector2(13.368749, 48.265625)
+cache/2/48/0/glyphs/3/advance = Vector2(15.168748, 48.265625)
 cache/2/48/0/glyphs/3/offset = Vector2(0, 0)
 cache/2/48/0/glyphs/3/size = Vector2(0, 0)
 cache/2/48/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
@@ -1752,53 +1761,53 @@ cache/2/48/0/underline_thickness = 2.390625
 cache/2/48/0/scale = 1.0
 cache/2/48/0/textures/0/offsets = PackedInt32Array(414, 0, 98, 77, 129, 77, 383, 80)
 cache/2/48/0/textures/0/image = SubResource("Image_e3ivd")
-cache/2/48/0/glyphs/20/advance = Vector2(29.206247, 48.265625)
+cache/2/48/0/glyphs/20/advance = Vector2(31.006247, 48.265625)
 cache/2/48/0/glyphs/20/offset = Vector2(-13.899999, -58.166668)
 cache/2/48/0/glyphs/20/size = Vector2(54, 75)
 cache/2/48/0/glyphs/20/uv_rect = Rect2(1, 1, 54, 75)
 cache/2/48/0/glyphs/20/texture_idx = 0
-cache/2/48/0/glyphs/21/advance = Vector2(29.206247, 48.265625)
+cache/2/48/0/glyphs/21/advance = Vector2(31.006247, 48.265625)
 cache/2/48/0/glyphs/21/offset = Vector2(-15.283333, -58.7)
 cache/2/48/0/glyphs/21/size = Vector2(63, 75)
 cache/2/48/0/glyphs/21/uv_rect = Rect2(57, 1, 63, 75)
 cache/2/48/0/glyphs/21/texture_idx = 0
-cache/2/48/0/glyphs/351/advance = Vector2(33.534378, 48.265625)
+cache/2/48/0/glyphs/351/advance = Vector2(35.33438, 48.265625)
 cache/2/48/0/glyphs/351/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/351/size = Vector2(73, 75)
 cache/2/48/0/glyphs/351/uv_rect = Rect2(122, 1, 73, 75)
 cache/2/48/0/glyphs/351/texture_idx = 0
-cache/2/48/0/glyphs/382/advance = Vector2(31.987497, 48.265625)
+cache/2/48/0/glyphs/382/advance = Vector2(33.7875, 48.265625)
 cache/2/48/0/glyphs/382/offset = Vector2(-14.45, -49.633335)
 cache/2/48/0/glyphs/382/size = Vector2(66, 66)
 cache/2/48/0/glyphs/382/uv_rect = Rect2(197, 1, 66, 66)
 cache/2/48/0/glyphs/382/texture_idx = 0
-cache/2/48/0/glyphs/426/advance = Vector2(33.534378, 48.265625)
+cache/2/48/0/glyphs/426/advance = Vector2(35.33438, 48.265625)
 cache/2/48/0/glyphs/426/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/426/size = Vector2(73, 75)
 cache/2/48/0/glyphs/426/uv_rect = Rect2(265, 1, 73, 75)
 cache/2/48/0/glyphs/426/texture_idx = 0
-cache/2/48/0/glyphs/459/advance = Vector2(31.034372, 48.265625)
+cache/2/48/0/glyphs/459/advance = Vector2(32.834373, 48.265625)
 cache/2/48/0/glyphs/459/offset = Vector2(-14.399999, -61.599995)
 cache/2/48/0/glyphs/459/size = Vector2(63, 78)
 cache/2/48/0/glyphs/459/uv_rect = Rect2(1, 78, 63, 78)
 cache/2/48/0/glyphs/459/texture_idx = 0
-cache/2/48/0/glyphs/36/advance = Vector2(33.534378, 48.265625)
+cache/2/48/0/glyphs/36/advance = Vector2(35.33438, 48.265625)
 cache/2/48/0/glyphs/36/offset = Vector2(-17.833334, -58.166668)
 cache/2/48/0/glyphs/36/size = Vector2(73, 75)
 cache/2/48/0/glyphs/36/uv_rect = Rect2(340, 1, 73, 75)
 cache/2/48/0/glyphs/36/texture_idx = 0
-cache/2/48/0/glyphs/69/advance = Vector2(31.706247, 48.265625)
+cache/2/48/0/glyphs/69/advance = Vector2(33.50625, 48.265625)
 cache/2/48/0/glyphs/69/offset = Vector2(-12.8, -60.3)
 cache/2/48/0/glyphs/69/size = Vector2(62, 77)
 cache/2/48/0/glyphs/69/uv_rect = Rect2(66, 78, 62, 77)
 cache/2/48/0/glyphs/69/texture_idx = 0
-cache/2/48/0/glyphs/3/advance = Vector2(14.268748, 48.265625)
+cache/2/48/0/glyphs/3/advance = Vector2(16.068748, 48.265625)
 cache/2/48/0/glyphs/3/offset = Vector2(0, 0)
 cache/2/48/0/glyphs/3/size = Vector2(0, 0)
 cache/2/48/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
 cache/2/48/0/glyphs/3/texture_idx = -1
 
-[sub_resource type="Image" id="Image_aaarj"]
+[sub_resource type="Image" id="Image_nokfu"]
 data = {
 "data": PackedByteArray("/////////////////////w=="),
 "format": "RGBA8",
@@ -1808,7 +1817,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_1jwea"]
-image = SubResource("Image_aaarj")
+image = SubResource("Image_nokfu")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6b3lo"]
 content_margin_left = 4.0
@@ -1924,16 +1933,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ha3lu")
-only_media_questions = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
+[node name="Gradient" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_5i7ie")
+
+[node name="Background" type="TextureRect" parent="."]
 self_modulate = Color(1, 1, 1, 0.301961)
 texture_repeat = 2
-material = ExtResource("2_nokfu")
-position = Vector2(968, 714)
-scale = Vector2(1.78, 1.7878)
-texture = ExtResource("3_8iuv3")
+material = ExtResource("2_ml6k1")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_obaby")
+expand_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_direction = 2
@@ -1955,19 +1977,21 @@ text = "Tvoje skóre: "
 layout_mode = 2
 theme = SubResource("Theme_1t0e6")
 theme_override_fonts/font = ExtResource("3_x1n5j")
+theme_override_font_sizes/font_size = 30
 text = "0"
 
 [node name="ScoreOutOf" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_1t0e6")
 theme_override_fonts/font = ExtResource("3_x1n5j")
+theme_override_font_sizes/font_size = 30
 text = "/10"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15
-anchor_top = 0.13
+anchor_top = 0.1
 anchor_right = 0.85
 anchor_bottom = 1.0
 
@@ -1977,7 +2001,8 @@ theme = SubResource("Theme_l35yq")
 theme_override_constants/separation = 20
 
 [node name="Question" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 100)
+z_index = 8
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 theme = ExtResource("1_ij2e0")
 bbcode_enabled = true
@@ -1986,6 +2011,15 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect" type="Panel" parent="MarginContainer/VBoxContainer/Question"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AnswerInput" type="LineEdit" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 50)
@@ -2065,6 +2099,7 @@ size_flags_vertical = 4
 alignment = 1
 
 [node name="Photo" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -2073,6 +2108,7 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="SourceLabel" type="Label" parent="MarginContainer/VBoxContainer/MediaContainer/Photo"]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -2124,15 +2160,6 @@ theme = SubResource("Theme_1t0e6")
 text = "0:33/1:20"
 horizontal_alignment = 2
 
-[node name="kun" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
-custom_minimum_size = Vector2(120, 120)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = SubResource("Theme_1t0e6")
-texture = ExtResource("6_dyeug")
-expand_mode = 1
-
 [node name="NoMediaPicture" type="TextureRect" parent="MarginContainer/VBoxContainer/MediaContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
@@ -2148,23 +2175,27 @@ size_flags_horizontal = 4
 theme = SubResource("Theme_1t0e6")
 text = "Potvrdit odpověď!"
 
-[node name="Answer" parent="." instance=ExtResource("9_aciuj")]
+[node name="InputAnswers" type="MarginContainer" parent="."]
 visible = false
 layout_mode = 1
-offset_right = 0.0
-offset_bottom = 0.0
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.15
+anchor_right = 0.85
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VyberZe4" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.3372549)
-position = Vector2(539, 359)
-texture = ExtResource("9_ea7go")
+[node name="VBoxContainer" type="VBoxContainer" parent="InputAnswers"]
+layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
 
-[node name="VyberZe5" type="Sprite2D" parent="."]
-visible = false
-modulate = Color(1, 1, 1, 0.592157)
-position = Vector2(539, 359)
-texture = ExtResource("9_hio1y")
+[node name="Answer" parent="InputAnswers/VBoxContainer" instance=ExtResource("9_aciuj")]
+layout_mode = 2
+
+[node name="AnswerCorrectness" parent="InputAnswers/VBoxContainer" instance=ExtResource("15_5i7ie")]
+layout_mode = 2
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MediaContainer/AudioContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/AnswerConfirm" to="." method="_on_answer_confirm_pressed"]
