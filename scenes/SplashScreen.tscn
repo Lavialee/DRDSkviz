@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://hxcuol0rtbmh"]
+
+[ext_resource type="Texture2D" uid="uid://d3o751dd1rx67" path="res://media/drds_logo.png" id="1_l2g8s"]
+[ext_resource type="Theme" uid="uid://drr3y75g2e42m" path="res://shaders/drds_theme.tres" id="1_rc2kg"]
+[ext_resource type="Texture2D" uid="uid://c2j4nmsobyxg1" path="res://media/cro_logo.png" id="2_rc2kg"]
+
+[node name="SplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rc2kg")
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="CeskyRozhlas" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("2_rc2kg")
+stretch_mode = 3
+
+[node name="DRDS" type="TextureRect" parent="VBox"]
+layout_mode = 2
+texture = ExtResource("1_l2g8s")
+stretch_mode = 3

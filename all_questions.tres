@@ -313,7 +313,7 @@ question_type = 1
 difficulty = 1
 answers = Array[String](["Tatínek pracuje v továrně"])
 correct_answer_indices = Array[int]([0])
-media_path = "res://media/questions/Otazka37_zvuk.mp3"
+media_path = "res://media/questions/Otazka37_zvuk.wav"
 answer_info = "Úplně prvním počinem byla stylizovaná reportáž [i]Podblanické děti návštěvou v Praze[/i], tehdy však ještě nebyl možný záznam. Prvním dochovaným dílem je tak voiceband [i]Tatínek pracuje v továrně[/i]."
 
 [sub_resource type="Resource" id="Resource_qdp2v"]
