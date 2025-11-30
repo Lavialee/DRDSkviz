@@ -20,10 +20,10 @@ enum InputAnswerMatch {
 # ============================================================================
 
 # UI Elements
-@onready var question_label = $MarginContainer/VBoxContainer/Question
+@onready var question_label = $MarginContainer/VBoxContainer/PanelContainer/Question
 @onready var answer_container = $MarginContainer/VBoxContainer/CenterContainer/AnswerContainer
 @onready var center_container = $MarginContainer/VBoxContainer/CenterContainer
-@onready var score_label = $HBoxContainer/ScoreNumber
+@onready var score_label = $ScoreDisplay/ScoreHbox/ScoreOfPlayer
 @onready var confirm_label = $MarginContainer/VBoxContainer/AnswerConfirm
 @onready var answer_input = $MarginContainer/VBoxContainer/AnswerInput
 

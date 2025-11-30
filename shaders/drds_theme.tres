@@ -209,6 +209,7 @@ LineEdit/styles/focus = SubResource("StyleBoxFlat_pdsa8")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_yudd2")
 LineEdit/styles/read_only = SubResource("StyleBoxFlat_dk5qb")
 Panel/styles/panel = ExtResource("2_2o3ph")
+PanelContainer/styles/panel = ExtResource("2_2o3ph")
 RichTextLabel/colors/default_color = Color(0.0980392, 0.156863, 0.501961, 1)
 RichTextLabel/constants/line_separation = 2
 RichTextLabel/font_sizes/bold_italics_font_size = 22
