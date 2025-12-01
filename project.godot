@@ -14,7 +14,7 @@ config/name="CRoKviz"
 run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(1, 1, 1, 1)
-boot_splash/image="uid://c2j4nmsobyxg1"
+boot_splash/image="res://media/splash_screen.png"
 
 [autoload]
 
