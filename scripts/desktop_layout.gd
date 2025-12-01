@@ -638,7 +638,13 @@ func _next_question() -> void:
 
 func show_score() -> void:
 	GameSettings.set_score(score, QUESTIONS_PER_GAME)
+	_remove_persistent_nodes()
 	get_tree().change_scene_to_file("res://scenes/ScoreScreen.tscn")
 
 func reset_game() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+
+func _remove_persistent_nodes() -> void:
+	for node in GameSettings.persistent_nodes:
+		if node and node.get_parent():
+			remove_child(node)

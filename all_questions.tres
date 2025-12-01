@@ -591,7 +591,7 @@ question_text = "V roce 2021 získala Thalii pro nejlepšího herce do 33let na�
 question_type = 1
 answers = Array[String](["Denisa Barešová"])
 correct_answer_indices = Array[int]([0])
-answer_info = "Denisa navštěvovala DRDS od roku 2005. Zahrála si například postavu Aninky v [/i]Brundibárovi[/i], kterou jsme v jejím podání mohli vidět i ve Švédsku, Francii nebo Anglii."
+answer_info = "Denisa navštěvovala DRDS od roku 2005. Zahrála si například postavu Aninky v [i]Brundibárovi[/i], kterou jsme v jejím podání mohli vidět i ve Švédsku, Francii nebo Anglii."
 
 [sub_resource type="Resource" id="Resource_bwfeb"]
 script = ExtResource("1_0oi3j")

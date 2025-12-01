@@ -1933,6 +1933,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ha3lu")
+only_media_questions = true
 
 [node name="Gradient" type="TextureRect" parent="."]
 visible = false
@@ -2137,11 +2138,10 @@ text = "zdroj apf"
 
 [node name="AudioContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MediaContainer"]
 custom_minimum_size = Vector2(0, 120)
+layout_direction = 2
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 20
-alignment = 1
 
 [node name="PlayButton" type="TextureButton" parent="MarginContainer/VBoxContainer/MediaContainer/AudioContainer"]
 custom_minimum_size = Vector2(60, 60)
